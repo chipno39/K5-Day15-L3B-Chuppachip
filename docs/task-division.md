@@ -1,5 +1,6 @@
 # Phân công chi tiết — Nhóm Chuppachip (L3B · Track A1)
 
+> **Kế hoạch tăng tốc hoàn thiện CP3 ngay tối nay (27/11):** xem chi tiết từng giờ tại [docs/cp3-sprint-tonight.md](cp3-sprint-tonight.md).
 > **Nguyên tắc bắt buộc:** Ai mang tên phần nào phải tự kiểm, tự thực hiện phần người thật và **giải thích được khi giám khảo hỏi** (không giải thích được → 0 điểm phần đó). Cả nhóm họp chốt 15 phút trước mỗi checkpoint để thống nhất mạch **Pain → Impact → Giải pháp → Đánh giá → Chi phí**.
 
 ---
