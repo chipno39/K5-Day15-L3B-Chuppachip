@@ -7,7 +7,7 @@
 - Tên nhóm: Chuppachip
 - Lớp: L3B
 - Track: A
-- Link repo: https://github.com/chipno39/K5-Day15-L3A-Chuppachip
+- Link repo: https://github.com/chipno39/K5-Day15-L3B-Chuppachip
 
 | STT | Họ và tên | Mã học viên | Vai trò | Phần việc chính |
 |---|---|---|---|---|
