@@ -31,6 +31,10 @@ personas:           # ≥3 kiểu người dùng; share cộng lại = 1
     source: "Phỏng vấn P4 và khai thác data/preclass: nhóm học viên đi làm tự học đêm (20h–02h), hỏi nhiều lượt để kiểm chứng bài trắc nghiệm."
 
 prices:             # USD / 1 triệu token — chép từ bảng giá chính thức. ≥2 mức model
+  - model: gemini-2.5-flash
+    input: 0.075
+    output: 0.30
+    source: "Google AI Studio Pricing (https://ai.google.dev/pricing) · cập nhật 27/11/2026."
   - model: gemini-1.5-flash
     input: 0.075
     output: 0.30
