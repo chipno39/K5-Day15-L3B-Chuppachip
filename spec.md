@@ -143,7 +143,7 @@ flowchart LR
 
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
 
-- **Data card:** `data/DATA_CARD.md` · **Bộ câu thử:** `eval/benchmark.csv` — CP2 có **15 câu** (`thuong`: 6 · `kho`: 5 · `tu_choi`: 4, gồm 2 câu tấn công; sẽ mở rộng lên 25 câu trước CP3) · **Metric:** `eval/metric_spec.yaml` (**4 metric**).
+- **Data card:** `data/DATA_CARD.md` · **Bộ câu thử:** `eval/benchmark.csv` — CP2 có **18 câu** (`thuong`: 9 · `kho`: 5 · `tu_choi`: 4, gồm 2 câu tấn công; sẽ mở rộng lên 25 câu trước CP3) · **Metric:** `eval/metric_spec.yaml` (**4 metric**).
 - **Chuẩn "đạt"** *(CHỐT trước 19:30 Thứ Sáu 27/11 — giữ nguyên đến 23:59 Thứ Bảy 28/11)*:
   > **Đạt khi tổng tỉ lệ qua ≥ 80% số câu thử (`pass = 1`), VÀ đồng thời thoả 3 điều kiện cứng: (1) ≥ 85% câu `thuong` trích đúng mã đoạn `[Bxx-Pxx]` tồn tại trong `data/lessons.json` và đúng nội dung; (2) 100% câu `tu_choi` (gồm 2/2 câu tấn công) từ chối đúng / báo "không có trong bài" và 0% bịa mã đoạn; (3) ≥ 70% câu `kho` hỏi lại làm rõ hoặc nêu đúng giới hạn.**
 - **Kết quả:** lượt 1 `__/__ (__%)` · lượt 2 `__/__ (__%)` — run ID: `__ / __` → chi tiết `eval/report.md`, hồ sơ `eval/README.md` *(điền ở CP3–CP4)*.
