@@ -8,8 +8,10 @@ README của nhóm có mục "Dùng AI vào việc gì" (2–3 dòng, bắt bu�
 |---|---|---|---|---|
 | Code bản chạy thử | | | | |
 | Prompt / thiết kế lời gọi mô hình | | | | |
-| Đào data (viết script đếm, gợi ý nhãn) | | | Kiểm tay __ dòng, khớp __ | |
-| Rà câu hỏi phỏng vấn / khảo sát | | Chỉ rà câu dẫn dắt | | |
+| Đào data (viết script đếm, gợi ý nhãn) | Coding agent (Claude Code) | Viết `evidence/count.py` đếm 8 chỉ số và lọc 6 ví dụ | Chạy lại script trên data BTC ngày 27/11: khớp 8/8 số và 6/6 ví dụ trong `data-mining.md`; kiểm lại giả định giờ UTC+7 và mẫu số 436 theo README của data | Đinh Hoàng Phong |
+| Rà câu hỏi phỏng vấn / khảo sát | Claude Code | Soạn bộ câu hỏi Mom Test, tin nhắn hẹn, script Apps Script tạo Google Form; đánh dấu câu dẫn dắt cần tránh | Phong duyệt từng câu trước khi hỏi; người được phỏng vấn và mọi câu trả lời là thật, AI không tạo | Đinh Hoàng Phong |
+| Chuyển ghi âm phỏng vấn thành chữ | Whisper (`faster-whisper`, chạy trên máy, không gửi ra ngoài) | Chuyển ghi âm P1 thành chữ; Claude Code sắp vào mẫu `P1.md` | Phong nghe lại ghi âm, sửa các chỗ máy nhận sai (đánh dấu `[...]`); file ghi âm không commit | Đinh Hoàng Phong |
+| Tổng hợp khảo sát | Claude Code (đọc Sheet kết quả qua Google Drive) | Đếm x/n từng câu, gắn cờ phiếu nghi là bản thử | Phong xác nhận phiếu thử, đối chiếu lại số với Google Forms | Đinh Hoàng Phong |
 | Viết câu thử (benchmark) | | | Mỗi câu thử có `source`; câu thử AI viết được ghi rõ | |
 | Sinh data `synthetic` (nếu có) | | | Seed __ · kiểm tay __ dòng | |
 | Chấm cột `pass` bằng LLM (nếu có) | | | Kiểm tra thủ công __ câu thử, khớp __/__ | |
