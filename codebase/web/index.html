@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pre-class Tutor · Chuppachip</title>
+    <link rel="stylesheet" href="/app.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-content">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span> Pre-class Tutor</div>
+        <span class="environment">Demo local</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <div class="intro">
+        <p class="lesson-eyebrow">Pre-class · Bài 07</p>
+        <h1>Context Retrieval, Guardrails và G10</h1>
+      </div>
+
+      <div class="workspace">
+        <section class="lesson-column" aria-label="Nội dung bài giảng">
+          <div class="panel lesson-media">
+            <div class="media-stage">
+              <div class="lesson-cover" id="lesson-cover">
+                <div class="cover-copy">
+                  <span class="cover-label">Tài liệu bài giảng mẫu</span>
+                  <h2>Trả lời có căn cứ</h2>
+                  <p>Mở đoạn liên quan để kiểm tra câu trả lời. Khi còn thiếu ngữ cảnh, hỏi lại một câu.</p>
+                </div>
+                <ol class="cover-steps" aria-label="Luồng tra cứu trong bài">
+                  <li><span></span> Câu hỏi</li>
+                  <li><span></span> Đoạn nguồn</li>
+                  <li><span></span> Mã trích dẫn</li>
+                </ol>
+              </div>
+              <video id="lesson-video" controls playsinline hidden aria-label="Video bài giảng"></video>
+            </div>
+            <div class="media-toolbar">
+              <p id="media-status" role="status">Đang xem bản đọc</p>
+              <input id="video-file" type="file" accept="video/*,.mp4,.webm" hidden>
+              <button type="button" id="pick-video">Mở video local</button>
+            </div>
+          </div>
+
+          <section class="panel reader-panel" aria-labelledby="source-heading">
+            <header class="panel-header"><h2 id="source-heading">Đoạn bài học</h2></header>
+            <div class="chapters" aria-label="Mục lục Bài 07">
+              <button type="button" class="chapter" data-code="B01-P01" aria-pressed="false"><span>B01-P01</span>System Prompt và User Prompt</button>
+              <button type="button" class="chapter" data-code="B01-P02" aria-pressed="false"><span>B01-P02</span>Hỏi lại khi thiếu căn cứ</button>
+              <button type="button" class="chapter" data-code="B01-P03" aria-pressed="false"><span>B01-P03</span>Trích đúng mã đoạn</button>
+            </div>
+            <div id="source-content" tabindex="-1" aria-live="polite"><p class="source-empty">Chọn một đoạn để đọc.</p></div>
+          </section>
+        </section>
+
+        <section class="panel chat-panel" aria-labelledby="chat-heading">
+          <header class="panel-header chat-header">
+            <span class="tutor-icon" aria-hidden="true">✦</span>
+            <div><h2 id="chat-heading">Trợ giảng</h2><p>Hỏi bài và mở đoạn được trích dẫn.</p></div>
+          </header>
+          <div class="chat-log" id="chat-log" role="log" aria-label="Nội dung hỏi đáp" tabindex="0">
+            <div class="welcome" id="welcome">
+              <h3>Bạn đang vướng phần nào?</h3>
+              <p>Gõ một câu hỏi hoặc chọn một ví dụ bên dưới.</p>
+            </div>
+          </div>
+          <div class="composer">
+            <div class="examples" aria-label="Câu hỏi để thử">
+              <button class="example" type="button" data-question="Với citation chunking, nếu câu trả lời có nhiều ý thì tutor phải đặt mã đoạn ở đâu?">Dẫn nguồn nhiều ý</button>
+              <button class="example" type="button" data-question="tại sao sai">Câu hỏi mơ hồ</button>
+              <button class="example" type="button" data-question="Mình muốn hỏi cách tính hàm mất mát Cross-Entropy trong PyTorch chi tiết từng bước?">Câu hỏi ngoài bài</button>
+            </div>
+            <form id="question-form">
+              <label class="sr-only" for="question">Câu hỏi về bài pre-class</label>
+              <textarea id="question" name="question" rows="2" maxlength="4000" required aria-describedby="keyboard-hint" placeholder="Nhập câu hỏi của bạn…"></textarea>
+              <button class="submit" id="submit" type="submit">Gửi</button>
+            </form>
+            <p class="keyboard-hint" id="keyboard-hint">Enter để gửi · Shift+Enter để xuống dòng</p>
+            <p class="status" id="status" role="status"></p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </body>
+</html>
