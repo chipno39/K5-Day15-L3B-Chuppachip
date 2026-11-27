@@ -175,7 +175,7 @@ flowchart LR
 
 | Thời điểm | Đổi gì | Vì sao (trỏ về câu thử / lỗi / bằng chứng nào) |
 |---|---|---|
-| *(chưa có thay đổi sau CP2)* | | |
+| 27/11/2026 · sau CP2 | Bổ sung B19–B25, ghi nguồn cho 11 câu do Lộc xác nhận và làm rõ tiêu chí từng câu trước lượt 1 | Mở rộng độ phủ cho CP3. Nguồn câu hỏi ghi theo S01–S06 và P3. Tiêu chí từng câu bám nội dung đoạn học, ví dụ B10 yêu cầu `[B04-P02]` cho bước tạo bản nháp và chờ duyệt. Chuẩn đạt ở §7 giữ nguyên. |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 
