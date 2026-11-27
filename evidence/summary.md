@@ -10,29 +10,29 @@
 | Nguồn | Đạt ngưỡng? | File |
 |---|---|---|
 | Đào data (x/N, %, cách đếm chạy lại được, ≥5 ví dụ) | ☑ — 8 chỉ số + 6 ví dụ; TV2 chạy lại `count.py` trên data BTC ngày 27/11, khớp 8/8 số | `evidence/data-mining.md` |
-| Phỏng vấn (≥3 người ngoài nhóm, đúng người dùng) | ☐ — có 3 buổi (P1, P3, P4) nhưng mới **2 người đúng vai** (P3, P4); P1 không xem video pre-class. Còn thiếu P2 | `evidence/interviews/P1.md`, `P3.md`, `P4.md` |
-| Khảo sát (≥20 người ngoài nhóm, đúng người dùng) | ☐ — đang mở, mới **7** câu trả lời hợp lệ (5 người có xem video) | `evidence/survey/questions.md`, `results.csv` |
+| Phỏng vấn (≥3 người ngoài nhóm, đúng người dùng) | ☑ *(tạm)* — 4 buổi, **3 người đúng vai** (P2, P3, P4); P1 không xem video pre-class. P2 do AI diễn đạt lại, đang chờ tin nhắn gốc để đối chiếu | `evidence/interviews/P1.md` … `P4.md` |
+| Khảo sát (≥20 người ngoài nhóm, đúng người dùng) | ☐ — đang mở, mới **8** câu trả lời hợp lệ (6 người có xem video) | `evidence/survey/questions.md`, `results.csv` |
 
 ## 2. Số chính
 
 - **Đào data** (`data/preclass/`, 05–25/11/2026): **47,5%** (598/1.260) lượt chat là hỏi nối tiếp trong ≤3 phút trên cùng video · **21,3%** (261/1.223) lượt bị chấm không bám bài nhưng câu trả lời vẫn dài, trung vị 329 ký tự · **17,1%** (216/1.260) câu hỏi ≤20 ký tự · **34,0%** (429/1.260) hỏi lúc 20h–02h · **20,3%** (399/1.968) sai câu kiểm tra ở lần làm đầu tiên · chỉ **145/436** học viên hoạt động từng dùng chat.
-- **Phỏng vấn** (n nhỏ nên không ghi %): **1/2** người đúng vai gặp pain rõ (P3), P4 chỉ vướng nhẹ · số lần/tháng: P3 khoảng 5–6, P4 không nêu số · mỗi lần mất **2–15 phút** (P4: 2', P3: 10–15'). P1 (ngoài vai) vướng ở bài lab, tự đọc lại mất 30–60'.
-- **Khảo sát** (n = 7 học viên L3 hợp lệ, dưới 10 người nên không ghi %):
-  - **2/7** chưa từng tự xem video pre-class.
-  - Trong 5 người có xem:
-    - **5/5** từng sai câu kiểm tra cuối bài vì hiểu lệch nội dung video trong 1 tháng qua (1 người ≥2 lần).
-    - **0/5** hiểu hẳn ở lần vướng gần nhất (4 hiểu một phần, 1 bỏ qua).
-    - **3/5** hỏi ChatGPT hoặc công cụ AI bên ngoài.
-    - **0/5** chọn "hỏi ở khung chat dưới video" ở câu 4.
-    - Thời gian mỗi lần: **3/5** mất 2–5', **2/5** mất 5–15'.
-    - Số lần vướng trong 1 tuần: 0, 0, 3, 3, 5.
+- **Phỏng vấn** (n nhỏ nên không ghi %): **2/3** người đúng vai gặp pain rõ (P2, P3), P4 chỉ vướng nhẹ · số lần/tháng: P2 khoảng 7–8, P3 khoảng 5–6, P4 không nêu số · mỗi lần mất **2–15 phút** (P4: 2', P2: ~10', P3: 10–15'). Giả thuyết đặt ngưỡng ≥2/3 người phải tự kiểm chứng lại sau khi đọc câu trả lời: **đạt tạm** (P2 tua lại video để đối chiếu, P3 đọc lại rồi hỏi thêm). P1 (ngoài vai) vướng ở bài lab, tự đọc lại mất 30–60'.
+- **Khảo sát** (n = 8 học viên L3 hợp lệ, dưới 10 người nên không ghi %):
+  - **2/8** chưa từng tự xem video pre-class.
+  - Trong 6 người có xem:
+    - **6/6** từng sai câu kiểm tra cuối bài vì hiểu lệch nội dung video trong 1 tháng qua (2 người ≥2 lần).
+    - **0/6** hiểu hẳn ở lần vướng gần nhất (4 hiểu một phần, 2 bỏ qua).
+    - **3/6** hỏi ChatGPT hoặc công cụ AI bên ngoài.
+    - **1/6** chọn "hỏi ở khung chat dưới video" ở câu 4.
+    - Thời gian mỗi lần: **3/6** mất 2–5', **2/6** mất 5–15', **1/6** trên 30'.
+    - Số lần vướng trong 1 tuần: 0, 0, 3, 3, 5, 5.
 
 Phỏng vấn nhiều vai thì đếm theo từng vai, không cộng chung.
 
 | | Vai | Gặp pain? | Số lần / 1 tháng qua | Lần gần nhất mất | Đang xoay xở bằng |
 |---|---|---|---|---|---|
 | P1 | Học viên L3, **không xem video pre-class** (ngoài vai chính) | Không ở video; vướng ở bài lab | "Hầu như bài lab nào cũng vướng" | 10–15' (nhờ AI tóm tắt) · 30–60' (tự đọc lại) | Đọc lại slide, AI bên ngoài tóm tắt |
-| P2 | *(chưa phỏng vấn — TV2 làm trước CP3)* | | | | |
+| P2 | Học viên L3 tự học pre-class buổi tối (21:30–22:15) *(AI diễn đạt lại)* | **Có** | ~7–8 | ~10' | Tua video → hỏi khung chat (ví dụ chung chung) → tua lại để đối chiếu |
 | P3 | Học viên L3 tự học pre-class buổi tối (~21:30) | **Có** | ~5–6 | 10–15' | Tua video → hỏi khung chat → hỏi thêm ví dụ có số liệu |
 | P4 | Học viên L3 xem pre-class ~20:00 | Rất nhẹ | Không nêu số | ~2' | Hỏi AI, tua lại video |
 
@@ -49,36 +49,36 @@ Phỏng vấn nhiều vai thì đếm theo từng vai, không cộng chung.
 
 **Data nói:** gần một nửa lượt chat là hỏi nối tiếp ngay trên cùng video, khoảng 1/5 câu trả lời không bám bài nhưng vẫn dài, và 1/5 lượt làm câu kiểm tra sai ở lần đầu.
 
-**Người dùng nói:** người tự học buổi tối với khái niệm mới (P3) phải đọc lại câu trả lời dài rồi hỏi thêm. Trong khảo sát, cả 5/5 người có xem video đều từng sai câu kiểm tra vì hiểu lệch, và không ai hiểu hẳn ở lần vướng gần nhất.
+**Người dùng nói:** người tự học buổi tối với khái niệm mới (P3) phải đọc lại câu trả lời dài rồi hỏi thêm. Trong khảo sát, cả 6/6 người có xem video đều từng sai câu kiểm tra vì hiểu lệch, và không ai hiểu hẳn ở lần vướng gần nhất.
 
 - **Khớp:**
-  - Hành vi "hỏi thêm sau khi đọc câu trả lời" (P3, 1 phiếu khảo sát) khớp với 47,5% lượt hỏi nối tiếp trong data.
+  - Hành vi "hỏi thêm hoặc tua lại đối chiếu sau khi đọc câu trả lời" (P2, P3, 1 phiếu khảo sát) khớp với 47,5% lượt hỏi nối tiếp trong data.
   - Việc sai câu kiểm tra vì hiểu lệch khớp với 20,3% sai ở lần làm đầu tiên.
-  - Thời gian 2–5' mỗi lần (3/5 phiếu) khớp với con số "3 phút" nhóm tự ước tính ở `spec.md` §2. Tuy nhiên P3 cho thấy có lần mất tới 10–15'.
+  - Thời gian 2–5' mỗi lần (3/6 phiếu) khớp với con số "3 phút" nhóm tự ước tính ở `spec.md` §2. Tuy nhiên P3 cho thấy có lần mất tới 10–15'.
 - **Lệch:**
   - P4 thấy trợ giảng hiện tại "hợp lí đủ hiểu" với câu hỏi đơn giản lúc 20h. Pain không xảy ra với mọi người, mà tập trung vào khái niệm khó hoặc thuật ngữ mới.
-  - Nhiều người không dùng khung chat mà dùng ChatGPT bên ngoài (3/5 phiếu, P1). P1 và 2/7 phiếu còn **không xem video pre-class**. Điều này khớp với data: chỉ 145/436 học viên từng dùng chat.
+  - Nhiều người không dùng khung chat mà dùng ChatGPT bên ngoài (3/6 phiếu, P1). P1 và 2/8 phiếu còn **không xem video pre-class**. Điều này khớp với data: chỉ 145/436 học viên từng dùng chat.
 - **Mới, nhóm chưa nghĩ tới:** vướng vì **thuật ngữ tiếng Anh** (phiếu 17:59, P3: "bài có thuật ngữ, công thức").
 
 ## 5. Kết luận *(tạm tại CP2)*
 
 Giả thuyết ở `evidence/hypothesis.md`: **đúng một phần.**
 
-- **Phần đúng:** với học viên có xem video và gặp khái niệm khó, câu trả lời dài khiến họ phải đọc lại và hỏi thêm (P3, data 47,5%). Hiểu lệch dẫn tới sai câu kiểm tra (5/5 phiếu, data 20,3%).
+- **Phần đúng:** với học viên có xem video và gặp khái niệm khó, câu trả lời dài khiến họ phải đọc lại và hỏi thêm (P3, data 47,5%). Hiểu lệch dẫn tới sai câu kiểm tra (6/6 phiếu, data 20,3%).
 - **Phần phải đổi:**
   - Pain không phổ biến với câu hỏi đơn giản (P4).
   - Một phần lớn học viên bỏ qua video pre-class hoặc khung chat và dùng AI bên ngoài.
 
 **Điều vẫn chưa biết:**
 - Việc thiếu mã đoạn trích dẫn có phải nguyên nhân khiến học viên phải hỏi lại hay không. Chưa ai nhắc trực tiếp; P3.md ghi rõ là chưa xác nhận.
-- Trung vị số phút mỗi lần trên mẫu đủ lớn (cần P2 và khảo sát ≥20 người).
+- Trung vị số phút mỗi lần trên mẫu đủ lớn (cần khảo sát ≥20 người).
 
 ## Lịch hẹn (dùng cho CP2 — chỉ ghi vai và giờ, không tên)
 
 | Vai | Giờ hẹn | Đã xong? |
 |---|---|---|
 | P1 · học viên L3 ngoài nhóm (TV2 Phong) | 27/11 ~18:15 | ✅ `interviews/P1.md` — không xem video pre-class nên không đúng vai |
-| P2 · học viên L3 tự học pre-class buổi tối (TV2 Phong) | 27/11 tối, __:__ | ☐ |
+| P2 · học viên L3 tự học pre-class buổi tối (TV2 Phong) | 27/11 tối | ✅ `interviews/P2.md` — chờ tin nhắn gốc để lấy trích nguyên văn |
 | P3 · học viên L3 tự học pre-class buổi tối (TV3 Lộc) | 27/11 | ✅ `interviews/P3.md` |
 | P4 · học viên L3 xem pre-class ~20:00 (TV4 Chiêu) | 27/11 17:30 | ✅ `interviews/P4.md` |
-| Khảo sát Google Form (≥20 người) | mở 27/11 17:43 → chốt 28/11 09:00 | ⏳ 7 hợp lệ |
+| Khảo sát Google Form (≥20 người) | mở 27/11 17:43 → chốt 28/11 09:00 | ⏳ 8 hợp lệ |
