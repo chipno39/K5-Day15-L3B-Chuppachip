@@ -18,10 +18,10 @@
 
 | | |
 |---|---|
-| Dùng để làm gì | Nguồn tri thức chỉ đọc cho công cụ `search_lesson` và `get_passage` trong `codebase/tools.py`; làm chuẩn đối chiếu mã đoạn `[Dxx-Pxx]` cho `eval/benchmark.csv` |
-| Từ đâu | **Nhóm tự viết lại (`synthetic`)** bản tóm tắt ngắn các khái niệm cốt lõi phổ quát của khoá (Day01, Day02, Day03, Day05, Day09, Day11, Day13) — không chép nguyên văn slide/transcript khoá học |
-| Xử lý những bước gì | Chuẩn hoá cấu trúc JSON gồm `code`, `lesson`, `title`, `keywords`, `text`; kiểm tay từng đoạn bởi Nguyễn Xuân Đạt & Trần Xuân Lộc |
-| Số dòng / số đoạn | **12 đoạn** (`D01-P01` đến `D13-P01`), độ dài 2–3 câu/đoạn |
-| Phiên bản / ngày lấy | v1.0 · tạo ngày 27/11/2026 (seed: viết tay có cấu trúc, không dùng sinh ngẫu nhiên) |
+| Dùng để làm gì | Nguồn tri thức cho `search_lesson` và `get_passage`, đồng thời dùng để đối chiếu mã đoạn trong benchmark |
+| Từ đâu | 12 đoạn mẫu do nhóm viết lại từ các khái niệm của khoá và 3 đoạn văn bản mẫu Bài 07 do Phạm Văn Chiêu cung cấp |
+| Xử lý những bước gì | Chuẩn hoá JSON gồm `code`, `lesson`, `title`, `keywords`, `text`. Giữ nguyên nội dung ba đoạn Bài 07 và thêm từ khóa tra cứu. Đã kiểm tra bằng các câu B16–B18 |
+| Số dòng / số đoạn | **15 đoạn** dùng dạng `Bxx-Pxx`. `B01` dành cho Bài 07, `B02`–`B08` dành cho 7 bài mẫu còn lại. Số trong mã là số thứ tự trong kho, độc lập với ngày học |
+| Phiên bản / ngày lấy | v1.1 · bổ sung Bài 07 ngày 27/11/2026 · soạn thủ công, không dùng seed |
 | Nhãn | **`synthetic`** (chỉ dùng chạy thử và đánh giá kỹ thuật, **không phải** bằng chứng pain) |
-| Giới hạn | Mới phủ 12 khái niệm chính của 7 ngày học; các câu hỏi thuộc ngày khác hoặc ngoài 12 đoạn này phải được hệ thống trả về "không có trong bài" |
+| Giới hạn | Kho chỉ bao phủ nội dung trong 15 đoạn. Ba đoạn Bài 07 chưa có mốc thời gian video để đối chiếu |

@@ -3,13 +3,13 @@
 
 metrics:
   - name: "trich_dung_nguon"
-    definition: "Với câu trong bài (thuong): câu trả lời có ít nhất 1 mã đoạn dạng [Dxx-Pxx] tồn tại thật trong data/lessons.json, khớp đúng mã đoạn mục tiêu của câu hỏi và nội dung không mâu thuẫn với đoạn đó."
+    definition: "Với câu trong bài (thuong): câu trả lời có ít nhất 1 mã đoạn dạng [Bxx-Pxx] tồn tại thật trong data/lessons.json, khớp đúng mã đoạn mục tiêu của câu hỏi và nội dung không mâu thuẫn với đoạn đó."
     grader: "nguoi"
     threshold: ">= 85% câu thuong"
     why: "Giải quyết trực tiếp pain học viên phải tua lại video kiểm chứng hoặc hỏi lặp lại (47,5% lượt hỏi nối tiếp trong <=3 phút ở data/preclass)."
 
   - name: "tu_choi_ngoai_bai"
-    definition: "Với câu hỏi ngoài tài liệu hoặc ngoài phạm vi (tu_choi): hệ thống nói rõ 'không có trong bài' hoặc từ chối nêu giới hạn + gợi ý hỏi TA/LMS, và tuyệt đối không bịa mã đoạn [Dxx-Pxx]."
+    definition: "Với câu hỏi ngoài tài liệu hoặc ngoài phạm vi (tu_choi): hệ thống nói rõ 'không có trong bài' hoặc từ chối nêu giới hạn + gợi ý hỏi TA/LMS, và tuyệt đối không bịa mã đoạn [Bxx-Pxx]."
     grader: "nguoi"
     threshold: "100% câu tu_choi (0% bịa mã đoạn)"
     why: "Chặn tình trạng trợ giảng trả lời dài (trung vị 329 ký tự) cho 21,3% lượt chat không bám bài (rubric_bam_bai=0) gây hiểu lệch kiến thức."
