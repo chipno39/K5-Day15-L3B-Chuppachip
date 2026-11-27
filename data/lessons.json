@@ -1,86 +1,107 @@
 [
   {
-    "code": "D01-P01",
+    "code": "B02-P01",
     "lesson": "Day01: AI & LLM Foundation",
     "title": "Chatbot là ứng dụng xây quanh mô hình ngôn ngữ",
     "keywords": ["chatbot", "llm", "ung dung", "model", "mo hinh", "khac nhau", "khac biet"],
     "text": "Một ứng dụng chatbot không chỉ là mô hình ngôn ngữ (LLM) đứng một mình. LLM chỉ sinh chữ tiếp theo dựa trên ngữ cảnh đầu vào; còn ứng dụng chatbot bao gồm giao diện, bộ nhớ hội thoại, system prompt, công cụ tra cứu và lớp kiểm soát an toàn bọc quanh LLM."
   },
   {
-    "code": "D01-P02",
+    "code": "B02-P02",
     "lesson": "Day01: AI & LLM Foundation",
     "title": "Token và cửa sổ ngữ cảnh (Context Window)",
     "keywords": ["token", "context", "window", "cua so ngu canh", "gioi han", "chi phi", "dai"],
     "text": "LLM đọc và sinh văn bản theo đơn vị token, không phải từng chữ cái. Cửa sổ ngữ cảnh (context window) là tổng số token tối đa gồm cả đầu vào và đầu ra trong một lượt gọi. Gửi ngữ cảnh quá dài vừa làm tăng chi phí token đầu vào, vừa dễ làm model bỏ sót chi tiết nằm ở giữa."
   },
   {
-    "code": "D01-P03",
+    "code": "B02-P03",
     "lesson": "Day01: AI & LLM Foundation",
     "title": "Ảo giác (Hallucination) và vì sao model tự tin nói sai",
     "keywords": ["ao giac", "hallucination", "bia thong tin", "tu tin noi sai", "can cu"],
     "text": "Ảo giác (hallucination) xảy ra khi LLM sinh ra thông tin nghe rất trôi chảy nhưng không có căn cứ sự thật, vì mục tiêu huấn luyện của model là dự đoán từ hợp lý nhất chứ không tự kiểm chứng sự thật. Để giảm ảo giác, cần cung cấp nguồn sự thật (grounding) và yêu cầu model nói 'không có thông tin' khi nguồn thiếu."
   },
   {
-    "code": "D02-P01",
+    "code": "B03-P01",
     "lesson": "Day02: Khám phá bài toán & JTBD",
     "title": "Jobs to be Done (JTBD) và mô tả pain không dùng chữ AI",
     "keywords": ["jtbd", "pain", "bai toan", "nguoi dung", "khong chu ai", "job"],
     "text": "Khi khám phá sản phẩm, cần mô tả công việc người dùng muốn hoàn thành (JTBD) theo cấu trúc: ai, đang làm gì, vướng ở đâu, hậu quả gì — tuyệt đối không nhét chữ AI vào mô tả vấn đề. Nếu bỏ AI đi mà bài toán biến mất thì đó không phải pain thật của người dùng."
   },
   {
-    "code": "D02-P02",
+    "code": "B03-P02",
     "lesson": "Day02: Khám phá bài toán & JTBD",
     "title": "Phỏng vấn theo Mom Test",
     "keywords": ["mom test", "phong van", "cau hoi", "dan dat", "bang chung", "qua khu"],
     "text": "Nguyên tắc Mom Test khi phỏng vấn người dùng: hỏi về chuyện thật đã xảy ra trong quá khứ (như 1 tháng gần nhất), không giới thiệu ý tưởng để xin lời khen, và tránh câu hỏi giả định kiểu 'bạn có muốn tính năng này không?'. Bằng chứng thật đến từ hành vi quá khứ, không phải lời hứa tương lai."
   },
   {
-    "code": "D03-P01",
+    "code": "B04-P01",
     "lesson": "Day03: Kiến trúc Workflow vs Agent",
     "title": "Khi nào chọn Workflow cố định thay vì Agent",
     "keywords": ["workflow", "agent", "kien truc", "chon", "co dinh", "don gian", "phuc tap"],
     "text": "Workflow cố định là luồng các bước lập trình sẵn trong đó AI chỉ đảm nhận 1–2 bước cụ thể; phù hợp khi quy trình rõ ràng, lặp lại, cần chi phí thấp và dễ kiểm soát. Chỉ nên dùng Agent (AI tự quyết định gọi công cụ nào tiếp theo) khi đường đi thay đổi khó đoán theo đầu vào."
   },
   {
-    "code": "D03-P02",
+    "code": "B04-P02",
     "lesson": "Day03: Kiến trúc Workflow vs Agent",
     "title": "Công cụ (Tool) và tác động ra ngoài",
     "keywords": ["tool", "cong cu", "tac dong ra ngoai", "chi doc", "nguoi duyet", "hitl"],
     "text": "Công cụ giúp hệ thống AI tra cứu dữ liệu thật hoặc tính toán chính xác bằng code thay vì để LLM tự nhẩm. Cần phân biệt công cụ chỉ đọc (an toàn, đảo được) và công cụ có tác động ra ngoài như gửi tin nhắn, hoàn tiền, sửa dữ liệu (cần tạo bản nháp chờ người duyệt)."
   },
   {
-    "code": "D05-P01",
+    "code": "B05-P01",
     "lesson": "Day05: Mức tự động & Nguyên tắc HAX",
     "title": "Chọn mức tự động theo nguyên tắc 'sai thì ai chịu gì'",
     "keywords": ["tu dong", "autonomy", "rui ro", "nguoi duyet", "chuyen nguoi", "muc tu dong"],
     "text": "Mức tự động của AI phụ thuộc vào chi phí khi sai: nếu sai rất đắt (hại sức khoẻ, mất tiền, kiến thức sai), chọn 'AI gợi ý, người quyết' hoặc 'AI tự làm khi chắc, chuyển người khi không chắc'. Chỉ để AI tự làm hoàn toàn khi sai rất rẻ và người dùng dễ thấy, dễ sửa ngay."
   },
   {
-    "code": "D05-P02",
+    "code": "B05-P02",
     "lesson": "Day05: Mức tự động & Nguyên tắc HAX",
     "title": "Nguyên tắc HAX G10 và G11",
     "keywords": ["hax", "g10", "g11", "khong chac", "thu hep", "giai thich", "nguyen tac"],
     "text": "Nguyên tắc HAX G10 yêu cầu hệ thống thu hẹp phạm vi dịch vụ khi không chắc chắn — ví dụ hỏi lại một câu làm rõ hoặc từ chối nêu giới hạn thay vì đoán bừa. Nguyên tắc G11 yêu cầu giải thích rõ vì sao hệ thống đưa ra kết quả đó (ví dụ trích dẫn đúng mã đoạn nguồn)."
   },
   {
-    "code": "D09-P01",
+    "code": "B06-P01",
     "lesson": "Day09: Đánh giá (Eval) & Metric",
     "title": "Thiết kế bộ câu thử và Metric kiểm chứng được",
     "keywords": ["eval", "benchmark", "metric", "cau thu", "chuan dat", "pass", "cham"],
     "text": "Một bộ câu thử (benchmark) tốt phải có cả câu thường, câu khó (mơ hồ/thiếu thông tin) và câu từ chối/tấn công, trong đó một phần đến từ dữ liệu hoặc người dùng thật. Tiêu chí pass phải kiểm chứng được (ví dụ 'có mã đoạn khớp dữ liệu'), không dùng tiêu chí mơ hồ như 'trả lời hay'."
   },
   {
-    "code": "D11-P01",
+    "code": "B07-P01",
     "lesson": "Day11: Guardrails & An toàn AI",
     "title": "Chặn Prompt Injection và ranh giới dữ liệu - chỉ dẫn",
     "keywords": ["prompt injection", "tan cong", "guardrail", "an toan", "system prompt", "bo qua"],
     "text": "Prompt injection là kỹ thuật người dùng chèn lệnh giả như 'bỏ qua hướng dẫn trước đó' hoặc 'in ra system prompt' để ép model làm trái quy tắc. Hệ thống cần coi mọi đầu vào của người dùng chỉ là dữ liệu, kết hợp tiền kiểm bằng code và quy tắc hệ thống cứng để từ chối các lệnh vượt quyền."
   },
   {
-    "code": "D13-P01",
+    "code": "B08-P01",
     "lesson": "Day13: Chi phí vận hành & Unit Economics",
     "title": "Chi phí trên mỗi task thành công (Cost per Successful Task)",
     "keywords": ["chi phi", "cost", "task thanh cong", "gia model", "mo phong", "persona"],
     "text": "Khi đánh giá chi phí vận hành AI ở quy mô thật, không chỉ nhìn giá mỗi lượt gọi mà phải tính 'Chi phí / task thành công' = (Chi phí trung bình 1 phiên) / (Tỉ lệ đạt thật từ bộ eval). Nếu tỉ lệ đạt thấp, chi phí thực tế để tạo ra một kết quả dùng được sẽ đội lên rất cao."
+  },
+  {
+    "code": "B01-P01",
+    "lesson": "Bài 07: Kỹ thuật Context Retrieval, Guardrails và Xử lý thiếu căn cứ (G10)",
+    "title": "Vai trò của System Prompt và User Prompt",
+    "keywords": ["system prompt", "user prompt", "chỉ dẫn hệ thống", "yêu cầu của người dùng"],
+    "text": "System prompt là chỉ dẫn hệ thống định hình vai trò, phong cách trả lời, thẩm quyền và các nguyên tắc cốt lõi của AI. User prompt là yêu cầu hoặc câu hỏi cụ thể của người dùng ở từng lượt tương tác. Trong ứng dụng trợ giảng, System prompt bắt buộc phải chứa nguyên tắc chỉ trả lời dựa trên tài liệu được cung cấp và không được tự suy đoán."
+  },
+  {
+    "code": "B01-P02",
+    "lesson": "Bài 07: Kỹ thuật Context Retrieval, Guardrails và Xử lý thiếu căn cứ (G10)",
+    "title": "Nguyên tắc thiết kế G10: Thu hẹp phạm vi khi không chắc",
+    "keywords": ["g10", "thu hẹp phạm vi", "hỏi lại", "thiếu dữ kiện", "thiếu căn cứ", "liên hệ trợ giảng"],
+    "text": "Nguyên tắc G10 quy định: Khi câu hỏi của người dùng quá ngắn (dưới 20 ký tự), mơ hồ hoặc thiếu dữ kiện, hệ thống không được tự suy diễn câu trả lời dài dòng mà phải hỏi lại đúng 1 câu để làm rõ ý định. Nếu thông tin hoàn toàn không có trong tài liệu bài học, hệ thống phải thông báo rõ 'Nội dung này không có trong bài giảng' và hướng dẫn học viên liên hệ trợ giảng (TA)."
+  },
+  {
+    "code": "B01-P03",
+    "lesson": "Bài 07: Kỹ thuật Context Retrieval, Guardrails và Xử lý thiếu căn cứ (G10)",
+    "title": "Kỹ thuật trích dẫn mã đoạn (Citation Chunking)",
+    "keywords": ["citation chunking", "trích dẫn", "mã đoạn", "kiểm chứng", "nhiều ý"],
+    "text": "Để tránh hiện tượng ảo giác (hallucination) và giúp học viên kiểm chứng nhanh trong 30 giây, mọi câu trả lời kiến thức của AI phải đính kèm mã đoạn ở dạng [Mã_Đoạn] (ví dụ: [B01-P01], [B01-P02]) ngay sau nhận định. Nếu câu hỏi có nhiều ý, mỗi ý cần trích dẫn đúng mã đoạn chứa căn cứ đó."
   }
 ]
