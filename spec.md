@@ -43,6 +43,7 @@
 
 - **Impact / tháng của hướng chọn (A1):** `145 học viên × 12,4 lượt/tháng × 5 phút/lượt ≈ 8.990 phút/tháng (~150 giờ/tháng)` trên tập đã dùng chat (hoặc `200 HV × 12 × 5 ≈ 12.000 phút`, ~200 giờ/tháng nếu quy đổi theo 200 HV).
   - *Nguồn từng thừa số:* `145 người` và `1.260 lượt / 21 ngày = 12,4 lượt/người/tháng` từ `data/preclass/chat.csv` (`evidence/count.py`).
+  - *Kiểm chéo số lần/tháng:* khảo sát 8 học viên L3 có xem video (câu 3) cho số lần vướng trong 1 tuần có trung vị **3**, tức khoảng **13 lần/tháng** (×4,3). Con số này **cùng độ lớn** với 12,4 lượt chat/tháng từ data. Hai số khác đơn vị: khảo sát đếm lần vướng, data đếm lượt chat. Vì vậy chỉ dùng để kiểm độ lớn, không thay thừa số.
   - *`5 phút/lượt`:* khảo sát 8 học viên L3 có xem video (`evidence/survey/results.csv`, câu 6) cho thời gian từ lúc vướng đến lúc hiểu hoặc bỏ qua là 2–5' (3/8), 5–15' (3/8), 15–30' (1/8), trên 30' (1/8). Người thứ 4 và 5 trong 8 người đều rơi vào khoảng **5–15 phút**. Phỏng vấn 4 người đúng vai cho P4 2', P5 2–3' (chỉ để tìm lại đúng đoạn video), P2 ~10', P3 10–15', trung vị khoảng 6'. Nhóm **chọn cận dưới 5 phút** để không thổi phồng impact. Nếu lấy 10 phút thì impact gấp đôi.
   - *Giới hạn:* n khảo sát nhỏ (8) và mỗi người tự ước lượng thời gian. Số lượt/tháng tính trên mọi lượt chat, không phải lượt nào cũng là một lần vướng.
 - **Hướng ĐÃ LOẠI + vì sao:**

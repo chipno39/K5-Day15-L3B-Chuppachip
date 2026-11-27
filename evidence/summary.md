@@ -36,7 +36,7 @@
     - Lần vướng gần nhất đã làm gì: **4/8** hỏi ChatGPT hoặc AI bên ngoài, **3/8** hỏi khung chat dưới video, **3/8** tua lại video.
     - Sau khi đọc câu trả lời: **5/8** tua lại video để đối chiếu hoặc hỏi thêm trong khung chat.
     - Thời gian mỗi lần: **3/8** mất 2–5', **3/8** 5–15', **1/8** 15–30', **1/8** trên 30'. Giá trị giữa nằm trong khoảng **5–15'**.
-    - Số lần vướng trong 1 tuần: 0, 0, 0, 3, 3, 5, 5, 10 (trung vị 3).
+    - Số lần vướng trong 1 tuần: 0, 0, 0, 3, 3, 5, 5, 10 (trung vị 3, tức khoảng 13 lần/tháng). Cùng độ lớn với 12,4 lượt chat/tháng/người trong data (khác đơn vị: lần vướng so với lượt chat).
 - **Dùng cho `spec.md` §2:** thừa số thời gian lấy **5 phút/lần**, là cận dưới khoảng giữa của khảo sát. Phỏng vấn 4 người đúng vai cho 2', 2–3', ~10', 10–15', trung vị khoảng 6'.
 
 Phỏng vấn nhiều vai thì đếm theo từng vai, không cộng chung.
