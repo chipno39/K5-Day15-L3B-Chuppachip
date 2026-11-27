@@ -166,7 +166,7 @@ flowchart LR
 
 ## §10. Phân công & changelog
 
-- **Phân công có tên (chia cặp theo chặng):**
+- **Phân công có tên (chia cặp theo chặng — chi tiết xem [docs/task-division.md](docs/task-division.md)):**
   - Chặng 1–2 (CP1–CP2): Cặp 1 (**Nguyễn Xuân Đạt**, **Trần Xuân Lộc**) dựng kiến trúc `spec.md` §4, khung `codebase/`, bộ `eval/`; Cặp 2 (**Đinh Hoàng Phong**, **Phạm Văn Chiêu**) đào `data/preclass/`, chuẩn bị phỏng vấn `evidence/interviews/`, `data/DATA_CARD.md`. Cả nhóm cùng soát trước CP2.
   - Chặng 3–4 (CP3–CP4): Đổi chéo kiểm thử; Cặp 1 nối model thật + cải tiến lượt 2; Cặp 2 hoàn thiện phỏng vấn + mô phỏng chi phí `cost/` + slide & video dự phòng.
 - **Dùng AI vào việc gì (chi tiết `docs/ai-usage.md`):** Nhóm dùng coding agent để viết script đào data `evidence/count.py`, dựng khung `tools.py`/`agent.py` và rà soát cấu trúc tài liệu theo rubric; toàn bộ quyết định chọn lát cắt, ngưỡng chuẩn "đạt", câu thử và chấm `pass` đều do thành viên nhóm kiểm tra và chịu trách nhiệm.
