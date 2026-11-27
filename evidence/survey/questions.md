@@ -5,7 +5,7 @@
 
 - **Link form:** https://forms.gle/FYpo2q2QWy34xaWa9
 - **Kênh đã gửi:** Discord kênh chung khoá (L3A, L3B)
-- **Giờ mở:** 17:43 Thứ Sáu 27/11/2026 · **Giờ chốt:** 09:00 Thứ Bảy 28/11/2026 (kịp tổng hợp trước CP3)
+- **Giờ mở:** 17:43 Thứ Sáu 27/11/2026 · **Giờ chốt số liệu:** 00:19 Thứ Bảy 28/11/2026 — 15 phiếu (form vẫn mở nhưng phiếu sau giờ này không tính vào CP3)
 
 ## Bộ câu hỏi
 

@@ -27,7 +27,9 @@
 - **Pain (KHÔNG chữ AI):** Học viên L3 tự học video pre-class vào buổi tối khi gặp chỗ khó hoặc đặt câu hỏi ngắn/ngoài bài thường nhận phản hồi dài, chung chung, không chỉ rõ đoạn bài nào, khiến họ phải hỏi nối tiếp nhiều lần, tự tua video mất thời gian hoặc hiểu lệch và làm sai câu kiểm tra cuối bài.
 - **Bằng chứng — số chính + kết luận (chi tiết: `evidence/data-mining.md`, `evidence/summary.md`):**
   - Từ `data/preclass/` (1.260 lượt chat của 145/436 HV hoạt động, 05/11–25/11/2026): **34,0%** (429/1.260) hỏi lúc 20h–02h; **17,1%** (216/1.260) câu hỏi ≤20 ký tự; **21,3%** (261/1.223) bị chấm không bám bài (`rubric_bam_bai = 0`) nhưng vẫn nhận câu trả lời trung vị 329 ký tự; **47,5%** (598/1.260) phải hỏi nối tiếp trong ≤3 phút trên cùng video; **20,3%** (399/1.968) sai câu kiểm tra lần đầu.
-  - Đang kiểm chéo bằng phỏng vấn ≥3 học viên L3 ngoài nhóm (`evidence/interviews/`, xong trước CP3).
+  - **Phỏng vấn 4 học viên L3 ngoài nhóm** (`evidence/interviews/P1–P4.md`, n nhỏ nên không ghi %): 3/4 có tự xem video pre-class (đúng vai). **2/4 gặp pain rõ** (P2, P3): đọc câu trả lời trong khung chat xong vẫn phải tua lại video để đối chiếu hoặc hỏi thêm ví dụ, mất khoảng 10–15 phút mỗi lần, 5–8 lần/tháng. 1/4 chỉ vướng nhẹ (P4, học lúc 20h, câu hỏi đơn giản, mất 2 phút). 1/4 không xem video mà tự đọc slide và nhờ AI bên ngoài (P1).
+  - **Khảo sát** (`evidence/survey/`, 10 học viên L3, chưa đạt ngưỡng 20 nên chỉ ghi x/n): 8/10 có xem video. Trong 8 người đó: **8/8** từng sai câu kiểm tra cuối bài vì hiểu lệch nội dung video trong 1 tháng qua, **0/8** hiểu hẳn ở lần vướng gần nhất, **5/8** phải tua lại video để đối chiếu hoặc hỏi thêm sau khi đọc câu trả lời.
+  - **Kết luận:** giả thuyết **đúng một phần**. Pain tập trung ở khái niệm khó hoặc thuật ngữ mới khi tự học buổi tối, không xảy ra với mọi câu hỏi. Một phần học viên bỏ qua khung chat và dùng AI bên ngoài (4/8 phiếu). Chi tiết: `evidence/summary.md`.
 
 ---
 
@@ -35,12 +37,14 @@
 
 | Hướng | Bao nhiêu người gặp | Bao nhiêu lần / tháng | Mỗi lần tốn gì | Impact / tháng | Làm kịp không | Chọn? |
 |---|---|---|---|---|---|---|
-| **A1 · Tutor pre-class có căn cứ mã đoạn & biết từ chối** | ~145 HV hoạt động chat/21 ngày (~200 HV/tháng trong 436 HV hoạt động) | ~12 lượt/HV/tháng (từ 1.260 lượt / 145 HV / 21 ngày ≈ 12,4) | ~3 phút kiểm chứng / hỏi lặp *(tự ước tính, kiểm lại qua phỏng vấn)* | ~7.200 phút (~120 giờ học viên/tháng) | Có (workflow 4 bước, 3 công cụ chỉ đọc) | **CHỌN** |
+| **A1 · Tutor pre-class có căn cứ mã đoạn & biết từ chối** | ~145 HV hoạt động chat/21 ngày (~200 HV/tháng trong 436 HV hoạt động) | ~12 lượt/HV/tháng (từ 1.260 lượt / 145 HV / 21 ngày ≈ 12,4) | ~5 phút kiểm chứng / hỏi lặp (cận dưới, từ khảo sát + phỏng vấn) | ~12.000 phút (~200 giờ học viên/tháng) | Có (workflow 4 bước, 3 công cụ chỉ đọc) | **CHỌN** |
 | A2 · Trợ lý Discord trả lời thông báo chính thức | ~400 HV L3 *(tự ước tính)* | ~4 lần/HV/tháng *(tự ước tính)* | ~4 phút tìm thông báo *(tự ước tính)* | ~6.400 phút (~107 giờ/tháng) | Có, nhưng thiếu data hành vi thật có sẵn | Loại |
 | A5 · Soạn thông báo đổi phòng cho key coach | ~10 key coach / ban đào tạo | ~8 buổi/tháng | ~20 phút rà bảng *(tự ước tính)* | ~1.600 phút (~27 giờ/tháng) | Khó kiểm chứng bằng người dùng thật trong 2 ngày | Loại |
 
-- **Impact / tháng của hướng chọn (A1):** `145 học viên × 12,4 lượt/tháng × 3 phút/lượt ≈ 5.394 phút/tháng (~90 giờ/tháng)` trên tập đã dùng chat (hoặc ~120 giờ/tháng nếu quy đổi theo 200 HV).
-  - *Nguồn từng thừa số:* `145 người` và `1.260 lượt / 21 ngày = 12,4 lượt/người/tháng` từ `data/preclass/chat.csv` (`evidence/count.py`); `3 phút/lượt` *(tự ước tính, sẽ cập nhật bằng số trung vị từ phỏng vấn ≥3 học viên trước CP3)*.
+- **Impact / tháng của hướng chọn (A1):** `145 học viên × 12,4 lượt/tháng × 5 phút/lượt ≈ 8.990 phút/tháng (~150 giờ/tháng)` trên tập đã dùng chat (hoặc `200 HV × 12 × 5 ≈ 12.000 phút`, ~200 giờ/tháng nếu quy đổi theo 200 HV).
+  - *Nguồn từng thừa số:* `145 người` và `1.260 lượt / 21 ngày = 12,4 lượt/người/tháng` từ `data/preclass/chat.csv` (`evidence/count.py`).
+  - *`5 phút/lượt`:* khảo sát 8 học viên L3 có xem video (`evidence/survey/results.csv`, câu 6) cho thời gian từ lúc vướng đến lúc hiểu hoặc bỏ qua là 2–5' (3/8), 5–15' (3/8), 15–30' (1/8), trên 30' (1/8). Người thứ 4 và 5 trong 8 người đều rơi vào khoảng **5–15 phút**. Phỏng vấn đúng vai cho P4 2', P2 ~10', P3 10–15', trung vị khoảng 10'. Nhóm **chọn cận dưới 5 phút** để không thổi phồng impact. Nếu lấy 10 phút thì impact gấp đôi.
+  - *Giới hạn:* n khảo sát nhỏ (8) và mỗi người tự ước lượng thời gian. Số lượt/tháng tính trên mọi lượt chat, không phải lượt nào cũng là một lần vướng.
 - **Hướng ĐÃ LOẠI + vì sao:**
   - *A2 (Trợ lý Discord):* Không có bộ log hành vi thật sẵn như `data/preclass/`, tốn thời gian thu bằng chứng thủ công.
   - *A5 (Vận hành đào tạo):* Bộ `data/training-ops/` chỉ là giả lập (không tính là bằng chứng pain) và khó hẹn đủ ≥3 key coach/ban đào tạo trong 2 ngày.
@@ -176,6 +180,7 @@ flowchart LR
 | Thời điểm | Đổi gì | Vì sao (trỏ về câu thử / lỗi / bằng chứng nào) |
 |---|---|---|
 | 27/11/2026 · sau CP2 | Bổ sung B19–B25, ghi nguồn cho 11 câu do Lộc xác nhận và làm rõ tiêu chí từng câu trước lượt 1 | Mở rộng độ phủ cho CP3. Nguồn câu hỏi ghi theo S01–S06 và P3. Tiêu chí từng câu bám nội dung đoạn học, ví dụ B10 yêu cầu `[B04-P02]` cho bước tạo bản nháp và chờ duyệt. Chuẩn đạt ở §7 giữ nguyên. |
+| 28/11/2026 · trước CP3 | §1 thay dòng "đang kiểm chéo" bằng kết quả 4 phỏng vấn và khảo sát. §2 đổi thừa số "3 phút/lượt *(tự ước tính)*" → **5 phút/lượt**, impact A1 từ ~90 lên ~150 giờ/tháng (tập 145 HV) | Bằng chứng thật thay cho số tự ước tính: khảo sát câu 6 (giá trị giữa nằm trong 5–15') và phỏng vấn P2–P4 (2–15'). Lấy cận dưới để không thổi phồng — `evidence/summary.md`, `evidence/survey/results.csv`. A1 vẫn hơn A2 (~107 giờ). |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 
