@@ -203,4 +203,4 @@ flowchart LR
 
 | Thời điểm | Đổi gì | Vì sao |
 |---|---|---|
-| | | |
+| 28/11/2026 · sau CP4 (12:40) | Cập nhật `demo-slides.pdf` (commit `0ee4b5b`, Chiêu) | Tinh chỉnh bố cục và câu từ các trang slide để hoàn thiện tài liệu thuyết trình cho buổi demo chính thức. |
