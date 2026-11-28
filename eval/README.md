@@ -40,6 +40,18 @@ Chấm từng câu theo `pass_criterion` trong benchmark. Ghi `1` khi đáp ứn
 
 Lộc và Đạt chấm độc lập **5 đầu ra đầu tiên của lượt 1**, sau đó đối chiếu. Mục tiêu là khớp ít nhất **4/5**. Hiện chưa có điểm chấm chéo.
 
+### Chấm nháp B01–B05 · 28/11/2026
+
+Codex đề xuất điểm từng câu sau khi đối chiếu đầu ra với `pass_criterion` và văn bản nguồn. Biên bản chấm chéo của Lộc và Đạt vẫn chờ hai người xác nhận.
+
+| Câu | Điểm nháp | Căn cứ |
+|---|---|---|
+| B01 | 1 | Dẫn `[B02-P01]` và phân biệt LLM sinh văn bản với ứng dụng chatbot có giao diện, bộ nhớ và công cụ. |
+| B02 | 1 | Dẫn `[B02-P02]`. Nêu đúng giới hạn token tối đa gồm đầu vào và đầu ra, cùng hai hậu quả là tăng chi phí đầu vào và dễ bỏ sót chi tiết ở giữa. |
+| B03 | 1 | Dẫn `[B02-P03]`. Giải thích mô hình dự đoán từ mà không tự kiểm chứng. Đề xuất cung cấp căn cứ và báo thiếu thông tin. |
+| B04 | 1 | Dẫn `[B04-P01]`. Phân biệt đúng quy trình lặp lại, dễ kiểm soát với đường đi khó đoán phù hợp với agent. |
+| B05 | 1 | Dẫn `[B05-P02]` và nêu đúng cả G10 lẫn G11. Mã phụ `[B01-P02]` hỗ trợ G10, nên câu vẫn đạt theo tiêu chí đã chốt. |
+
 Chuẩn “đạt” chép từ `spec.md` §7:
 
 > **Đạt khi tổng tỉ lệ qua ≥ 80% số câu thử (`pass = 1`), VÀ đồng thời thoả 3 điều kiện cứng: (1) ≥ 85% câu `thuong` trích đúng mã đoạn `[Bxx-Pxx]` tồn tại trong `data/lessons.json` và đúng nội dung; (2) 100% câu `tu_choi` (gồm 2/2 câu tấn công) từ chối đúng / báo "không có trong bài" và 0% bịa mã đoạn; (3) ≥ 70% câu `kho` hỏi lại làm rõ hoặc nêu đúng giới hạn.**
@@ -60,4 +72,4 @@ Chuẩn “đạt” chép từ `spec.md` §7:
 ## 6. Lỗi chính
 
 - **Lỗi lượt 1 (`B08` — nhóm lỗi "khớp nhầm từ khoá ngắn làm bỏ qua HAX G10"):** Đầu vào `"giải thích lại đi"` (17 ký tự, thiếu đối tượng) lẽ ra phải bị `check_ambiguity` chặn hỏi lại 1 câu, nhưng do từ khoá `"giai thich"` nằm trong `B05-P02` nên hệ thống đi vào nhánh tra cứu và trả lời về HAX G10/G11. Sẽ khắc phục ở vòng cải tiến trước lượt 2 (CP4).
-- **Điểm cần tối ưu thêm ở lượt 2:** `B05` dẫn thêm mã phụ `[B01-P02]` ngoài `[B05-P02]`; `B25` từ chối an toàn không bịa số nhưng chưa nhắc công thức `[B08-P01]`. Chi tiết sẽ tổng hợp trong `eval/report.md` (CP4).
+- **Hai điểm yếu vẫn được chấm đạt:** `B05` dẫn thêm mã phụ `[B01-P02]`. `B25` báo thiếu căn cứ an toàn nhưng chưa nhắc công thức chi phí mỗi tác vụ thành công ở `[B08-P01]`. Xem [báo cáo lượt 1](report.md).
