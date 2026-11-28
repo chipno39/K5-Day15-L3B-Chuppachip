@@ -50,13 +50,14 @@ Chuẩn “đạt” chép từ `spec.md` §7:
 
 ## 5. Đã chạy gì
 
-Chưa có lượt đánh giá model thật trên bản làm việc này. Chờ Đạt chạy bộ câu thử đã chốt và bàn giao `eval/run-1.csv`.
+Đã hoàn thành lượt 1 trên model thật `gemini-3.5-flash-lite` (25/25 câu, 0 lỗi API, trung bình 0.8 lần gọi model / 3.2 lần gọi công cụ / 363 token vào / 54 token ra mỗi câu).
 
 | Lượt | Run ID | Model | Cấu hình | Đạt / tổng | % | Đạt chuẩn? |
 |---|---|---|---|---|---|---|
-| 1 | Chờ lượt 1 | | | | | |
-| 2 | Chờ lượt 2 | | | | | |
+| 1 | `run-1@20261128-002242` | `gemini-3.5-flash-lite` | Workflow cố định 4 bước (`agent.py` v1, 15 đoạn `lessons.json`) | 24 / 25 | 96,0% | Có (`thuong` 14/14, `kho` 6/7, `tu_choi` 4/4) |
+| 2 | Chờ lượt 2 (CP4) | | | | | |
 
 ## 6. Lỗi chính
 
-Chờ kết quả lượt 1 để ghi các câu trượt và nhóm lỗi trong `eval/report.md`. Khi kiểm tra chế độ giả, câu B08 đi vào nhánh tra cứu thay vì hỏi lại. Với B25, đoạn Unit Economics có trong danh sách nhưng đứng sau đoạn JTBD. Cần đối chiếu đầu ra thật của hai câu này khi chấm.
+- **Lỗi lượt 1 (`B08` — nhóm lỗi "khớp nhầm từ khoá ngắn làm bỏ qua HAX G10"):** Đầu vào `"giải thích lại đi"` (17 ký tự, thiếu đối tượng) lẽ ra phải bị `check_ambiguity` chặn hỏi lại 1 câu, nhưng do từ khoá `"giai thich"` nằm trong `B05-P02` nên hệ thống đi vào nhánh tra cứu và trả lời về HAX G10/G11. Sẽ khắc phục ở vòng cải tiến trước lượt 2 (CP4).
+- **Điểm cần tối ưu thêm ở lượt 2:** `B05` dẫn thêm mã phụ `[B01-P02]` ngoài `[B05-P02]`; `B25` từ chối an toàn không bịa số nhưng chưa nhắc công thức `[B08-P01]`. Chi tiết sẽ tổng hợp trong `eval/report.md` (CP4).

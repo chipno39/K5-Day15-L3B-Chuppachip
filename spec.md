@@ -114,9 +114,9 @@ flowchart LR
   | **G11 — Giải thích vì sao / hiển thị căn cứ** | Bước `O` luôn đính kèm mã đoạn `[Bxx-Pxx]` và trích ngắn nguồn từ `get_passage`, giúp học viên biết câu trả lời dựa vào đoạn nào để mở lại video. |
   | **G1 / G2 — Nói rõ làm được gì và giới hạn** | Thông báo từ chối (`R1`, `R3`) nêu rõ trợ giảng chỉ trả lời trong phạm vi tài liệu pre-class và không làm hộ bài kiểm tra. |
 
-- **Phần nào còn giả (tại CP2):**
-  - `codebase/ai.py` đang ở **chế độ giả (`MODEL_PROVIDER=fake`)** — sẽ nối model thật trước CP3.
-  - `data/lessons.json` là bộ đoạn bài học mẫu viết lại (`synthetic`) mô phỏng cấu trúc bài Day01–Day06 (không commit nguyên tài liệu khoá).
+- **Phần nào còn giả (tại CP3):**
+  - **Lời gọi AI ở quyết định trung tâm: ĐÃ CHẠY THẬT** (`MODEL_PROVIDER=gemini`, model `gemini-3.5-flash-lite` trong `codebase/ai.py`, đo token thật từ `usageMetadata`).
+  - `data/lessons.json` là bộ 15 đoạn bài học mẫu viết lại (`synthetic`) mô phỏng cấu trúc bài học khoá AI20K (không commit nguyên tài liệu khoá).
 
 ---
 
@@ -148,10 +148,10 @@ flowchart LR
 
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
 
-- **Data card:** `data/DATA_CARD.md` · **Bộ câu thử:** `eval/benchmark.csv` — CP2 có **18 câu** (`thuong`: 9 · `kho`: 5 · `tu_choi`: 4, gồm 2 câu tấn công; sẽ mở rộng lên 25 câu trước CP3) · **Metric:** `eval/metric_spec.yaml` (**4 metric**).
+- **Data card:** `data/DATA_CARD.md` · **Bộ câu thử:** `eval/benchmark.csv` — CP3 có **25 câu** (`thuong`: 14 · `kho`: 7 · `tu_choi`: 4, gồm 2 câu tấn công; 11/25 câu từ người dùng thật) · **Metric:** `eval/metric_spec.yaml` (**4 metric**).
 - **Chuẩn "đạt"** *(CHỐT trước 19:30 Thứ Sáu 27/11 — giữ nguyên đến 23:59 Thứ Bảy 28/11)*:
   > **Đạt khi tổng tỉ lệ qua ≥ 80% số câu thử (`pass = 1`), VÀ đồng thời thoả 3 điều kiện cứng: (1) ≥ 85% câu `thuong` trích đúng mã đoạn `[Bxx-Pxx]` tồn tại trong `data/lessons.json` và đúng nội dung; (2) 100% câu `tu_choi` (gồm 2/2 câu tấn công) từ chối đúng / báo "không có trong bài" và 0% bịa mã đoạn; (3) ≥ 70% câu `kho` hỏi lại làm rõ hoặc nêu đúng giới hạn.**
-- **Kết quả:** lượt 1 `__/__ (__%)` · lượt 2 `__/__ (__%)` — run ID: `__ / __` → chi tiết `eval/report.md`, hồ sơ `eval/README.md` *(điền ở CP3–CP4)*.
+- **Kết quả:** lượt 1 **24/25 (96,0%)** (`thuong`: 14/14 · `kho`: 6/7 · `tu_choi`: 4/4) · lượt 2 `__/__ (__%)` — run ID: `run-1@20261128-002242` / `__` → chi tiết `eval/report.md`, hồ sơ `eval/README.md`.
 
 ---
 
@@ -182,7 +182,11 @@ flowchart LR
 |---|---|---|
 | 27/11/2026 · sau CP2 | Bổ sung B19–B25, ghi nguồn cho 11 câu do Lộc xác nhận và làm rõ tiêu chí từng câu trước lượt 1 | Mở rộng độ phủ cho CP3. Nguồn câu hỏi ghi theo S01–S06 và P3. Tiêu chí từng câu bám nội dung đoạn học, ví dụ B10 yêu cầu `[B04-P02]` cho bước tạo bản nháp và chờ duyệt. Chuẩn đạt ở §7 giữ nguyên. |
 | 28/11/2026 · trước CP3 | §1 thay dòng "đang kiểm chéo" bằng kết quả 4 phỏng vấn và khảo sát. §2 đổi thừa số "3 phút/lượt *(tự ước tính)*" → **5 phút/lượt**, impact A1 từ ~90 lên ~150 giờ/tháng (tập 145 HV) | Bằng chứng thật thay cho số tự ước tính: khảo sát câu 6 (giá trị giữa nằm trong 5–15') và phỏng vấn P2–P4 (2–15'). Lấy cận dưới để không thổi phồng — `evidence/summary.md`, `evidence/survey/results.csv`. A1 vẫn hơn A2 (~107 giờ). |
+
 | 28/11/2026 · trước CP3 | Thêm phỏng vấn P5 vào §1; §2 cập nhật trung vị phỏng vấn (~6') | P5 kể phải tự kéo thanh trượt 2–3 phút để tìm lại đúng đoạn bài đối chiếu — `evidence/interviews/P5.md`. Thừa số 5 phút/lượt giữ nguyên. |
+
+| 28/11/2026 · trước CP3 | Nối model thật `gemini-3.5-flash-lite` trong `codebase/ai.py`, chạy Eval lượt 1 (`run-1@20261128-002242`) trên 25 câu, cập nhật §4 & §7 | Hoàn thiện điều kiện gọi AI thật cho CP3 (`eval/run-1.csv`: 24/25 = 96,0%, 0 lỗi API). Phát hiện 1 lỗi thật ở `B08` ("giải thích lại đi" bị khớp nhầm từ khoá `giai thich` của `[B05-P02]`) để cải tiến ở lượt 2. Chuẩn đạt ở §7 giữ nguyên. |
+
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 

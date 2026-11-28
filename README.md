@@ -94,6 +94,8 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 
 ## Bản chạy thử — viết ở đâu
 
+**Giao diện web demo local:** chạy `python codebase/web_app.py`, rồi mở [127.0.0.1:8000](http://127.0.0.1:8000/). Đọc các đoạn Bài 07 từ mục lục hoặc chọn **Mở video local** để phát tệp bài giảng trong trình duyệt. Để thử tutor, chọn **Dẫn nguồn nhiều ý** rồi bấm mã trong câu trả lời để mở đoạn gốc. Web dùng cùng hàm `answer()` với CLI và dùng cấu hình model hiện có trong `.env`. Khi chưa nối model, web ghi rõ **Chế độ giả** bên cạnh kết quả tra cứu.
+
 | File | Viết gì | Bước guide |
 |---|---|---|
 | `codebase/agent.py` | `answer(text)` — luồng chính, đúng hình dạng ở `spec.md` §4. Khung có sẵn một workflow 2 bước *ví dụ* | 3.2 |
