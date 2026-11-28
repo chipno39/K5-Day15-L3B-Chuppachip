@@ -1,20 +1,20 @@
 # Người dùng thử *(bonus)*
 
-> Điền ở guide bước 4.3 — 2–3 người ngoài nhóm, ~10 phút / người, theo 5 nhịp: làm quen · bối cảnh · giao việc · quan sát · hỏi sau. Ôn lại: ngày 5, ngày 13. Chấm ở rubric Bonus.
-> Không ghi tên: ghi vai. Hành vi quan sát được nặng hơn lời nói; toàn lời khen = phiên chưa đạt, giao việc khó hơn.
-> Người dùng thử **không thay được** bằng chứng pain ở `evidence/`.
+> Điền ở guide bước 4.3 — **2 người ngoài nhóm**, ~5–10 phút / người, theo 5 nhịp: làm quen · bối cảnh · giao việc · quan sát · hỏi sau. Chấm ở rubric Bonus (+5 điểm).
+> **Đã ẩn danh hoàn toàn** (chỉ ghi vai, không ghi tên thật). Người dùng thử **không thay được** bằng chứng pain ở `evidence/`.
 
 | Người thử (vai) | Việc giao (theo kết quả, không theo nút) | Quan sát (làm gì đầu tiên, chỗ do dự, chỗ hiểu sai) | Trích nguyên văn | Mức nghiêm trọng (cao / vừa / thấp) |
 |---|---|---|---|---|
-| | | | | |
-| | | | | |
-| | | | | |
+| **U1 · Học viên AI20K ngoài nhóm** *(thử qua gửi câu hỏi + ảnh chụp Web UI, 28/11 13:55)* | (1) Hỏi 1 câu kiến thức LLM và kiểm chứng nguồn bài học; (2) Hỏi 1 câu mơ hồ *"vậy cái này dùng agent là tốt nhất à?"* xem trợ giảng xử lý ra sao | Câu 1 (*"LLM dự đoán từ tiếp theo sao vẫn suy luận/viết code được?"*) vượt 15 đoạn mẫu → hệ thống báo *"Không có trong tài liệu bài học hiện tại"* (không bịa). Câu 2 hệ thống trả lời đúng nguyên tắc kèm `[B04-P01]` nhưng chưa hỏi ngược *"tác vụ nào"*. Người thử khen mã `[B04-P01]` nhưng khi nhìn ảnh tĩnh chưa thấy nội dung đoạn nguồn đi kèm; góp ý trả lời theo cấu trúc ngắn + ví dụ + hỏi ngược 1 câu bối cảnh. | *"Có mã đoạn trích dẫn là điểm cộng vì mình có thể đối chiếu lại nội dung bài pre-class, không phải tin hoàn toàn vào AI. Tuy nhiên, nếu chỉ có mã [Bxx-Pxx] mà không hiển thị đoạn nội dung nguồn tương ứng hoặc không bấm vào để mở được nguồn, thì mã này hơi khó dùng."* / *"Chưa chắc nhé! ... Bạn đang nói đến tác vụ nào vậy? Như vậy người học không bị cụt hứng."* | **Vừa** (UX hiển thị nguồn kèm mã & câu hỏi ngược khi gặp đại từ mơ hồ) |
+| **U2 · Học viên AI20K ngoài nhóm** *(thử qua gửi câu hỏi + ảnh chụp Web UI, 28/11 14:15)* | (1) Hỏi phân biệt LLM quyết định bước tiếp theo trong agent vs workflow cố định và kiểm chứng nguồn; (2) Hỏi ngắn *"agent khác chatbot chỗ nào vậy?"* xem trợ giảng xử lý ra sao | Câu 1 hệ thống trả lời đúng, rõ ràng kèm `[B04-P01]`; người thử thấy giải thích dễ hiểu nhưng chỉ nhìn mã `[B04-P01]` chưa hình dung ngay đó là đoạn nào nếu không bấm mở nguồn. Câu 2 (*"agent khác chatbot chỗ nào vậy?"*) tuy cả `[B02-P01]` và `[B04-P01]` đều có trong kho nhưng model báo *"Không có trong tài liệu bài học hiện tại"* (từ chối an toàn nhưng hơi chặt — bỏ lỡ cơ hội tổng hợp 1 câu định hướng từ 2 đoạn sẵn có). | *"Câu trả lời đầu khá dễ hiểu, nhưng phần [B04-P01] hơi khó hình dung là đang trích từ đoạn nào. Nếu bấm/xem được nội dung nguồn thì sẽ dễ kiểm chứng bài hơn."* / *"Câu 2 xử lý vậy cũng hợp lý vì nó không có trong tài liệu. Nhưng nếu được thì có thể trả lời ngắn 1 câu giải thích agent khác chatbot ở điểm nào, rồi mới hướng sang Discord."* | **Vừa** (UX hiển thị tiêu đề/nội dung nguồn & độ chặt khi tổng hợp 2 đoạn liên quan) |
 
-Câu hỏi sau: *"Nếu mai không được dùng nữa, bạn thấy: rất tiếc / hơi tiếc / không sao?"* → __ / __ / __
+Câu hỏi sau: *"Nếu mai không được dùng nữa, bạn thấy: rất tiếc / hơi tiếc / không sao?"* → **0 / 2 / 0** *(2/2 người chọn "hơi tiếc" — tiện hỏi ngay có nguồn đối chiếu, nhưng vẫn còn video/tài liệu để tự học)*
 
 ## Tổng hợp
 
-- Chủ đề lặp nhiều nhất: __
-- Sửa gì trước demo (ghi `spec.md` §10): __
-- Giữ gì và vì sao: __
-- Để dành sau: __
+- **Chủ đề lặp nhiều nhất (2/2 người thử):**
+  1. Cả U1 và U2 đều đánh giá cao sự ngắn gọn và mã trích dẫn `[Bxx-Pxx]` để tự kiểm chứng, nhưng cùng góp ý **chỉ hiện mã `[B04-P01]` mà chưa kèm tên đoạn / trích dẫn ngắn ngay bên dưới** khiến người học khó hình dung đoạn nào khi chưa bấm mở.
+  2. Cả U1 và U2 đều mong hệ thống **mềm dẻo hơn một bước** khi gặp câu thiếu ngữ cảnh hoặc câu so sánh chéo 2 đoạn sẵn có (nêu nhanh 1 câu định hướng dựa trên căn cứ sẵn có trước khi hỏi ngược hoặc chuyển Discord).
+- **Sửa gì trước demo (ghi `spec.md` §10):** Giữ nguyên code & benchmark đã đo ở lượt 2 (không phá vỡ kết quả đã chốt CP4); trên Web UI `codebase/web_app.py` đã hỗ trợ bấm trực tiếp vào mã `[Bxx-Pxx]` để mở khung đoạn gốc — khi Demo trực tiếp sẽ bấm mở thẻ nguồn ngay cho người xem thấy rõ, đồng thời ghi nhận 2 cải tiến UX/prompt này vào backlog sau demo (`spec.md` §10).
+- **Giữ gì và vì sao:** Giữ nguyên cơ chế từ chối rõ *"Không có trong tài liệu bài học hiện tại"* khi câu hỏi vượt kho đoạn (U1, U2 đều xác nhận hợp lý và tránh bịa kiến thức) và giữ mã `[Bxx-Pxx]` gắn ngay sau nhận định.
+- **Để dành sau (1 tuần tới):** (1) Hiển thị sẵn tiêu đề đoạn ngay cạnh mã (VD: `[B04-P01 · Workflow vs Agent]`) để nhìn thoáng là biết nguồn; (2) Tinh chỉnh prompt cho phép tổng hợp ngắn từ 2 đoạn sẵn có (`[B02-P01]` + `[B04-P01]`) kèm câu hỏi ngược khi phát hiện đại từ mơ hồ (*"cái này"*).
