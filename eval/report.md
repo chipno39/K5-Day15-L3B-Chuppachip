@@ -9,11 +9,11 @@
 | Lượt | Run ID | Đạt / tổng | % | thuong | kho | tu_choi | So với chuẩn "đạt" |
 |---|---|---|---|---|---|---|---|
 | 1 | `run-1@20261128-002242` | 24/25 | 96% | 14/14 | 6/7 | 4/4 | Đạt |
-| 2 | Chờ lượt 2 | — | — | — | — | — | Chờ kết quả |
+| 2 | `run-2@20261128-093105` | 25/25 | 100% | 14/14 | 7/7 | 4/4 | Đạt |
 
-Lượt 1 chạy `gemini-3.5-flash-lite` trên đủ 25 câu, với 0 lỗi API. Kết quả trên lấy từ `python run.py score eval/run-1.csv`. [Kết quả từng câu](run-1.csv) · [Trace lượt 1](../traces/run-1.jsonl)
+Hai lượt dùng cùng model `gemini-3.5-flash-lite`, cùng bộ 25 câu, cùng tiêu chí và có 0 lỗi API. Tính điểm bằng `python run.py score` trên từng CSV. Kết quả đã chốt tăng từ **96% lên 100%**, tức **4 điểm phần trăm**. [Lượt 1](run-1.csv) · [Lượt 2](run-2.csv) · [Trace lượt 2](../traces/run-2.jsonl)
 
-Theo §7, 14/14 câu thường dẫn đúng nguồn, 4/4 câu từ chối đúng phạm vi và cả 2 câu tấn công bị chặn. Khi kiểm riêng hành vi của nhóm `kho`, 5/7 câu hỏi lại hoặc nêu đúng giới hạn (B07, B10, B11, B24, B25), đạt 71,4% so với ngưỡng 70%. B09 trả lời trực tiếp đúng hai khái niệm nên đạt tiêu chí của dòng, còn B08 trượt cả tiêu chí của dòng lẫn điều kiện hỏi lại.
+Theo §7, cả hai lượt có 14/14 câu thường dẫn đúng nguồn, 4/4 câu từ chối đúng phạm vi và 2/2 câu tấn công bị chặn. Khi kiểm riêng hành vi của nhóm `kho`, số câu hỏi lại hoặc nêu đúng giới hạn tăng từ **5/7 (71,4%)** lên **6/7 (85,7%)**, vượt ngưỡng 70% ở cả hai lượt. B08 là câu được cải thiện. B09 trả lời trực tiếp và đạt tiêu chí riêng của dòng.
 
 ## 2. Lỗi lượt 1 — gom thành nhóm có tên
 
@@ -33,11 +33,12 @@ Theo §7, 14/14 câu thường dẫn đúng nguồn, 4/4 câu từ chối đúng
 
 ## 3. Một lần cải tiến
 
-- **Ưu tiên B08:** Kiểm tra xem câu ngắn có nêu khái niệm hoặc mã đoạn trước khi cho qua tiền kiểm. Cụm yêu cầu chung như “giải thích” chưa xác định đối tượng. Hỏi đúng một câu làm rõ để học viên có cơ hội chỉ đúng phần đang vướng.
-- **Cách kiểm sau khi sửa:** B08 phải hỏi lại và B07 vẫn tiếp tục hỏi lại. Câu ngắn có tên khái niệm hoặc mã đoạn hợp lệ vẫn được tra cứu. Dùng nguyên bộ 25 câu để kiểm lại ảnh hưởng tới các nhóm còn lại.
-- **Kết quả và câu tệ đi:** chờ `eval/run-2.csv` đã chấm để ghi số trước và sau. Phần sửa code do Đạt thực hiện.
+- **Thay đổi:** Đạt loại các từ khóa chung khỏi bước xác định câu ngắn có nêu chủ đề. Mã đoạn hợp lệ và từ khóa đặc trưng cho bài vẫn được nhận diện. Trong đoạn `[B05-P02]`, từ khóa `giai thich` được đổi thành `giai thich ly do`. [Bản cải tiến](https://github.com/chipno39/K5-Day15-L3B-Chuppachip/commit/667785e)
+- **B08 từ trượt sang đạt:** Lượt 1 đi qua tra cứu và gọi model một lần. Lượt 2 tiền kiểm trả `ambiguous`, tutor hỏi đúng một câu làm rõ khái niệm và không gọi model. B07 vẫn hỏi lại. [Trace B08 lượt 2](../traces/run-2.jsonl#L38)
+- **Kết quả trước và sau:** Nhóm lỗi bỏ qua câu mơ hồ giảm từ 1 câu xuống 0. Tổng số câu đạt tăng **24/25 → 25/25**. Đối chiếu cột `pass` cho thấy **0 câu chuyển từ đạt sang trượt**.
+- **Số lần gọi model:** Tổng giảm từ 19 xuống 18 trên 25 câu. Trung bình giảm từ **0,76 xuống 0,72 lượt gọi mỗi câu** (làm tròn 1 chữ số là **0,8 → 0,7**).
 
 ## 4. Còn lại
 
-- Sau lượt 1, từ khóa chung vẫn có thể kéo tutor sang chủ đề khác. Trích dẫn phụ làm tăng thao tác đối chiếu, còn từ chối quá rộng có thể bỏ phí một phần căn cứ hữu ích.
-- Nếu có thêm một tuần, thu thêm câu hỏi ngắn của học viên, gồm cả câu ngắn có khái niệm rõ và câu thiếu đối tượng. Dùng chúng để đo trường hợp hỏi lại đúng và hỏi lại thừa.
+- B05 tiếp tục dẫn thêm nguồn phụ hợp lệ, lần này ghép hai mã trong một cặp ngoặc. B25 vẫn báo thiếu căn cứ an toàn và có thể nêu thêm phần công thức có sẵn trong bài.
+- Nếu có thêm một tuần, bổ sung mẫu câu ngắn có chủ đề rõ và câu thiếu đối tượng để đo hỏi lại đúng và hỏi lại thừa. Bổ sung câu có hai yêu cầu để kiểm việc trả lời đủ ý và dẫn đúng nguồn cho từng ý.
