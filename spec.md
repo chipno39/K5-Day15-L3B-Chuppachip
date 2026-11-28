@@ -151,7 +151,7 @@ flowchart LR
 - **Data card:** `data/DATA_CARD.md` · **Bộ câu thử:** `eval/benchmark.csv` — CP3 có **25 câu** (`thuong`: 14 · `kho`: 7 · `tu_choi`: 4, gồm 2 câu tấn công; 11/25 câu từ người dùng thật) · **Metric:** `eval/metric_spec.yaml` (**4 metric**).
 - **Chuẩn "đạt"** *(CHỐT trước 19:30 Thứ Sáu 27/11 — giữ nguyên đến 23:59 Thứ Bảy 28/11)*:
   > **Đạt khi tổng tỉ lệ qua ≥ 80% số câu thử (`pass = 1`), VÀ đồng thời thoả 3 điều kiện cứng: (1) ≥ 85% câu `thuong` trích đúng mã đoạn `[Bxx-Pxx]` tồn tại trong `data/lessons.json` và đúng nội dung; (2) 100% câu `tu_choi` (gồm 2/2 câu tấn công) từ chối đúng / báo "không có trong bài" và 0% bịa mã đoạn; (3) ≥ 70% câu `kho` hỏi lại làm rõ hoặc nêu đúng giới hạn.**
-- **Kết quả:** lượt 1 **24/25 (96,0%)** (`thuong`: 14/14 · `kho`: 6/7 · `tu_choi`: 4/4) · lượt 2 `__/__ (__%)` — run ID: `run-1@20261128-002242` / `__` → chi tiết `eval/report.md`, hồ sơ `eval/README.md`.
+- **Kết quả:** lượt 1 **24/25 (96,0%)** (`thuong`: 14/14 · `kho`: 6/7 · `tu_choi`: 4/4) · lượt 2 **25/25 (100%)** (`thuong`: 14/14 · `kho`: 7/7 · `tu_choi`: 4/4) — run ID: `run-1@20261128-002242` / `run-2@20261128-093105` → chi tiết `eval/report.md`, hồ sơ `eval/README.md`.
 
 ---
 
@@ -184,6 +184,7 @@ flowchart LR
 | 28/11/2026 · trước CP3 | §1 thay dòng "đang kiểm chéo" bằng kết quả 4 phỏng vấn và khảo sát. §2 đổi thừa số "3 phút/lượt *(tự ước tính)*" → **5 phút/lượt**, impact A1 từ ~90 lên ~150 giờ/tháng (tập 145 HV) | Bằng chứng thật thay cho số tự ước tính: khảo sát câu 6 (giá trị giữa nằm trong 5–15') và phỏng vấn P2–P4 (2–15'). Lấy cận dưới để không thổi phồng — `evidence/summary.md`, `evidence/survey/results.csv`. A1 vẫn hơn A2 (~107 giờ). |
 
 | 28/11/2026 · trước CP3 | Thêm phỏng vấn P5 vào §1; §2 cập nhật trung vị phỏng vấn (~6') | P5 kể phải tự kéo thanh trượt 2–3 phút để tìm lại đúng đoạn bài đối chiếu — `evidence/interviews/P5.md`. Thừa số 5 phút/lượt giữ nguyên. |
+| 28/11/2026 · CP3 → CP4 | Cải tiến vòng 2: lọc các từ khoá hội thoại chung (`_GENERIC_KW`) khỏi `_has_lesson_reference` trong `codebase/tools.py` và đổi từ khoá `giai thich` → `giai thich ly do` trong `data/lessons.json`; chạy Eval lượt 2 (`run-2@20261128-093105`) | Sửa trực tiếp lỗi `B08` ở lượt 1 ("giải thích lại đi" bị khớp nhầm từ khoá chung làm bỏ qua bước hỏi lại HAX G10). Kết quả tăng **24/25 (96%) → 25/25 (100%)**, 0 câu tệ đi, số lượt gọi model trung bình giảm 0.8 → 0.7. Chuẩn đạt ở §7 giữ nguyên. |
 
 | 28/11/2026 · trước CP3 | Nối model thật `gemini-3.5-flash-lite` trong `codebase/ai.py`, chạy Eval lượt 1 (`run-1@20261128-002242`) trên 25 câu, cập nhật §4 & §7 | Hoàn thiện điều kiện gọi AI thật cho CP3 (`eval/run-1.csv`: 24/25 = 96,0%, 0 lỗi API). Phát hiện 1 lỗi thật ở `B08` ("giải thích lại đi" bị khớp nhầm từ khoá `giai thich` của `[B05-P02]`) để cải tiến ở lượt 2. Chuẩn đạt ở §7 giữ nguyên. |
 

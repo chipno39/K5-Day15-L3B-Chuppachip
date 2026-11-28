@@ -69,6 +69,12 @@ def _load_lessons() -> list:
         return json.load(f)
 
 
+_GENERIC_KW = {
+    "giai thich", "khac nhau", "khac biet", "cau hoi", "nhieu y",
+    "dai", "chon", "cham", "pass", "bo qua", "hoi lai", "don gian", "phuc tap",
+}
+
+
 def _has_lesson_reference(norm_q: str) -> bool:
     words = set(norm_q.split())
     for item in _load_lessons():
@@ -76,7 +82,7 @@ def _has_lesson_reference(norm_q: str) -> bool:
             return True
         for kw in item.get("keywords", []):
             kw_norm = _normalize(kw)
-            if kw_norm and len(kw_norm) >= 3 and re.search(r"\b" + re.escape(kw_norm) + r"\b", norm_q):
+            if kw_norm and len(kw_norm) >= 3 and kw_norm not in _GENERIC_KW and re.search(r"\b" + re.escape(kw_norm) + r"\b", norm_q):
                 return True
     return False
 

@@ -59,7 +59,7 @@
     "code": "B05-P02",
     "lesson": "Day05: Mức tự động & Nguyên tắc HAX",
     "title": "Nguyên tắc HAX G10 và G11",
-    "keywords": ["hax", "g10", "g11", "khong chac", "thu hep", "giai thich", "nguyen tac"],
+    "keywords": ["hax", "g10", "g11", "khong chac", "thu hep", "giai thich ly do", "nguyen tac"],
     "text": "Nguyên tắc HAX G10 yêu cầu hệ thống thu hẹp phạm vi dịch vụ khi không chắc chắn — ví dụ hỏi lại một câu làm rõ hoặc từ chối nêu giới hạn thay vì đoán bừa. Nguyên tắc G11 yêu cầu giải thích rõ vì sao hệ thống đưa ra kết quả đó (ví dụ trích dẫn đúng mã đoạn nguồn)."
   },
   {
