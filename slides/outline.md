@@ -14,7 +14,7 @@
 | 7 | Kết luận | Go / iterate / stop — dẫn số ở trang 1, 5, 6 | — | ☑ |
 | 8 | Nếu có thêm 1 tuần | 2–3 việc, trỏ về lỗi còn lại / phản hồi người dùng | `eval/report.md` mục 4 · `validation/log.md` | ☑ |
 
-- **File slide chính thức trong repo:** [demo-slides.pdf](file:///e:/Vinuni/K5-Day15-L3B-Chuppachip/demo-slides.pdf) (nằm ở thư mục gốc repo).
+- **File slide chính thức trong repo:** [demo-slides.pdf](../demo-slides.pdf) (nằm ở thư mục gốc repo).
 - **Thư mục Video Demo & Slide dự phòng (Google Drive):** [Google Drive Folder](https://drive.google.com/drive/folders/15K2J5MsfUC9AZHLjgaSxlLuV7l08G172?usp=sharing)
   - Video demo CP3: `Video-democp3.mp4`
   - Video demo dự phòng CP4 (1,5–2 phút): `Vid-duphong.mp4` (mở được bằng Tab Ẩn Danh)
