@@ -85,11 +85,12 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 |---|---|---|
 | Lời gọi AI ở quyết định trung tâm | **Thật** (bắt buộc từ CP3) | Model chính: `gemini-3.5-flash-lite` (hoặc `gemini-2.5-flash-lite`); dự phòng: `gpt-4o-mini` (OpenAI fallback) |
 | Kho bài học `data/lessons.json` | **Giả lập** (`synthetic`) | 15 đoạn bài học mô phỏng cấu trúc bài Day 01–07, không commit tài liệu mật của khoá |
-| Log hành vi `data/preclass/chat.csv` | **Thật** | 1.260 lượt chat ẩn danh của 145 học viên L3 do BTC cấp |
+| Log hành vi `data/preclass/chat.csv` | **Thật** | 1.260 lượt chat ẩn danh của 145 học viên L3 do BTC cấp · **không commit** vào repo, đếm lại bằng `evidence/count.py` |
+| Phỏng vấn, khảo sát (`evidence/`) | **Thật** | 5 phỏng vấn học viên L3 ngoài nhóm, 15 phiếu khảo sát (chốt 00:19 28/11). Câu trả lời P2 đã qua AI diễn đạt lại nên không lấy làm trích nguyên văn |
 
 ## Dùng AI vào việc gì
 
-Nhóm dùng coding agent để hỗ trợ viết script thống kê dữ liệu `evidence/count.py`, dựng khung tra cứu `tools.py` và chuẩn hoá báo cáo rubric. Toàn bộ quyết định chọn bài toán A1, chốt chuẩn đạt §7, viết và gắn nhãn 25 câu thử, chấm `pass` trung thực và phân tích vòng cải tiến đều do 4 thành viên nhóm tự thực hiện và chịu trách nhiệm (chi tiết xem [docs/ai-usage.md](docs/ai-usage.md)).
+Nhóm dùng coding agent để hỗ trợ viết script thống kê dữ liệu `evidence/count.py`, dựng khung tra cứu `tools.py`, tạo Google Form khảo sát, chuyển ghi âm phỏng vấn thành chữ (Whisper chạy trên máy), đếm kết quả khảo sát, soát số liệu slide (`slides/soat-so-lieu.md`) và chuẩn hoá báo cáo rubric. Toàn bộ quyết định chọn bài toán A1, chốt chuẩn đạt §7, viết và gắn nhãn 25 câu thử, chấm `pass` trung thực và phân tích vòng cải tiến đều do 4 thành viên nhóm tự thực hiện và chịu trách nhiệm (chi tiết xem [docs/ai-usage.md](docs/ai-usage.md)).
 
 ## File mẫu — điền ở bước nào
 

@@ -15,6 +15,6 @@ README của nhóm có mục "Dùng AI vào việc gì" (2–3 dòng, bắt bu�
 | Viết câu thử (benchmark) | | | Mỗi câu thử có `source`; câu thử AI viết được ghi rõ | |
 | Sinh data `synthetic` (nếu có) | | | Seed __ · kiểm tay __ dòng | |
 | Chấm cột `pass` bằng LLM (nếu có) | | | Kiểm tra thủ công __ câu thử, khớp __/__ | |
-| Slide, văn bản | | | | |
+| Slide, văn bản | Claude Code | Trích chữ từ `demo-slides.pdf`, dò từng số / trích dẫn trang 1–8 với file nguồn → `slides/soat-so-lieu.md`; soạn khung ý cho `reflection/dinh-hoang-phong.md` | Phong duyệt từng dòng soát (vd câu trích P3 trên slide không có trong `P3.md`), gửi Chiêu sửa slide; tự viết lại reflection bằng lời của mình | Đinh Hoàng Phong |
 
 **Không dùng AI để:** tạo người được phỏng vấn, trích dẫn, câu trả lời khảo sát; sửa kết quả các lượt đã chạy (`eval/run-*.csv`, `cost/simulate-*.csv`, `traces/`).
