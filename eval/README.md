@@ -38,13 +38,11 @@ Chấm từng câu theo `pass_criterion` trong benchmark. Ghi `1` khi đáp ứn
 
 Đối chiếu các điều kiện cứng của §7 riêng với điểm `pass` từng câu. Với B09, B10 và B24, một câu trả lời trực tiếp có thể đạt tiêu chí của dòng. Để tính vào điều kiện cứng của nhóm `kho`, đầu ra vẫn phải hỏi lại hoặc nêu đúng giới hạn. Ví dụ ở B10, giới hạn là chỉ tạo bản nháp và chờ duyệt trước khi thực hiện tác động ra ngoài. Ở B24, giới hạn là dừng suy diễn khi câu hỏi còn mơ hồ.
 
-Lộc và Đạt chấm độc lập **5 đầu ra đầu tiên của lượt 1**, sau đó đối chiếu. Mục tiêu là khớp ít nhất **4/5**. Hiện chưa có điểm chấm chéo.
+### Chấm chéo B01–B05 · 28/11/2026
 
-### Chấm nháp B01–B05 · 28/11/2026
+Người chấm: **Trần Xuân Lộc** và **Nguyễn Xuân Đạt**. Đạt xác nhận kết quả đối chiếu **khớp 5/5**, vượt ngưỡng 4/5. Dãy điểm của hai người đều là `1-1-1-1-1`.
 
-Codex đề xuất điểm từng câu sau khi đối chiếu đầu ra với `pass_criterion` và văn bản nguồn. Biên bản chấm chéo của Lộc và Đạt vẫn chờ hai người xác nhận.
-
-| Câu | Điểm nháp | Căn cứ |
+| Câu | Điểm đã đối chiếu | Căn cứ |
 |---|---|---|
 | B01 | 1 | Dẫn `[B02-P01]` và phân biệt LLM sinh văn bản với ứng dụng chatbot có giao diện, bộ nhớ và công cụ. |
 | B02 | 1 | Dẫn `[B02-P02]`. Nêu đúng giới hạn token tối đa gồm đầu vào và đầu ra, cùng hai hậu quả là tăng chi phí đầu vào và dễ bỏ sót chi tiết ở giữa. |
@@ -62,14 +60,16 @@ Chuẩn “đạt” chép từ `spec.md` §7:
 
 ## 5. Đã chạy gì
 
-Đã hoàn thành lượt 1 trên model thật `gemini-3.5-flash-lite` (25/25 câu, 0 lỗi API, trung bình 0.8 lần gọi model / 3.2 lần gọi công cụ / 363 token vào / 54 token ra mỗi câu).
+Đã chạy đủ 25 câu ở cả hai lượt trên model thật `gemini-3.5-flash-lite` với 0 lỗi API. Hai lượt dùng cùng bộ câu thử và tiêu chí.
 
 | Lượt | Run ID | Model | Cấu hình | Đạt / tổng | % | Đạt chuẩn? |
 |---|---|---|---|---|---|---|
 | 1 | `run-1@20261128-002242` | `gemini-3.5-flash-lite` | Workflow cố định 4 bước (`agent.py` v1, 15 đoạn `lessons.json`) | 24 / 25 | 96,0% | Có (`thuong` 14/14, `kho` 6/7, `tu_choi` 4/4) |
-| 2 | Chờ lượt 2 (CP4) | | | | | |
+| 2 | `run-2@20261128-093105` | `gemini-3.5-flash-lite` | Lọc từ khóa chung ở bước xác định câu hỏi mơ hồ | 25 / 25 | 100% | Có (`thuong` 14/14, `kho` 7/7, `tu_choi` 4/4) |
+
+Số lượt gọi model giảm từ 19 xuống 18, tương ứng **0,76 → 0,72 lượt gọi mỗi câu**. [CSV lượt 2](run-2.csv) · [Báo cáo so sánh](report.md)
 
 ## 6. Lỗi chính
 
-- **Lỗi lượt 1 (`B08` — nhóm lỗi "khớp nhầm từ khoá ngắn làm bỏ qua HAX G10"):** Đầu vào `"giải thích lại đi"` (17 ký tự, thiếu đối tượng) lẽ ra phải bị `check_ambiguity` chặn hỏi lại 1 câu, nhưng do từ khoá `"giai thich"` nằm trong `B05-P02` nên hệ thống đi vào nhánh tra cứu và trả lời về HAX G10/G11. Sẽ khắc phục ở vòng cải tiến trước lượt 2 (CP4).
-- **Hai điểm yếu vẫn được chấm đạt:** `B05` dẫn thêm mã phụ `[B01-P02]`. `B25` báo thiếu căn cứ an toàn nhưng chưa nhắc công thức chi phí mỗi tác vụ thành công ở `[B08-P01]`. Xem [báo cáo lượt 1](report.md).
+- **B08 đã sửa ở lượt 2:** Tutor hỏi lại đúng một câu thay vì tự chọn chủ đề HAX. Số lần gọi model cho câu này giảm từ 1 xuống 0.
+- **B07 giữ hành vi hỏi lại.** Không có câu nào chuyển từ đạt sang trượt. B05 vẫn dẫn nguồn phụ và B25 có thể nêu thêm công thức chi phí mỗi tác vụ thành công. Xem [báo cáo so sánh](report.md).
