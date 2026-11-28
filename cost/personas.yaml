@@ -30,19 +30,19 @@ personas:           # ≥3 kiểu người dùng; share cộng lại = 1
     turns_per_session: 5
     source: "Phỏng vấn P4 và khai thác data/preclass: nhóm học viên đi làm tự học đêm (20h–02h), hỏi nhiều lượt để kiểm chứng bài trắc nghiệm."
 
-prices:             # USD / 1 triệu token — chép từ bảng giá chính thức. ≥2 mức model
-  - model: gemini-2.5-flash
-    input: 0.075
-    output: 0.30
-    source: "Google AI Studio Pricing (https://ai.google.dev/pricing) · cập nhật 27/11/2026."
-  - model: gemini-1.5-flash
-    input: 0.075
-    output: 0.30
-    source: "Google AI Studio Pricing (https://ai.google.dev/pricing) · cập nhật 27/11/2026."
-  - model: gemini-1.5-pro
-    input: 1.25
-    output: 5.00
-    source: "Google AI Studio Pricing (https://ai.google.dev/pricing) · cập nhật 27/11/2026."
+prices:             # USD / 1 triệu token — chép từ bảng giá chính thức (further-reading/model-prices.csv). ≥2 mức model
+  - model: gemini-3.5-flash-lite
+    input: 0.30
+    output: 2.50
+    source: "Google Gemini API Pricing (https://ai.google.dev/gemini-api/docs/pricing) · cập nhật 25/11/2026 (model chạy thật ở lượt 1)."
+  - model: gemini-3.8-flash
+    input: 0.75
+    output: 3.75
+    source: "Google Gemini API Pricing (https://ai.google.dev/gemini-api/docs/pricing) · cập nhật 25/11/2026 (giá đến 31/12/2026)."
+  - model: gemini-4-hydrogen
+    input: 1.50
+    output: 7.50
+    source: "Google Gemini API Pricing (https://ai.google.dev/gemini-api/docs/pricing) · cập nhật 25/11/2026 (tầng model lớn để so sánh)."
 
 usd_to_vnd:         # tuỳ chọn: điền thì bản tóm tắt in thêm tiền Việt
   rate: 25400
