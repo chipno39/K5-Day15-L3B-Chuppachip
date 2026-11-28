@@ -157,7 +157,15 @@ flowchart LR
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*
 
-*(Sẽ hoàn thiện ở CP4 sau khi chạy `python run.py simulate` ≥50 phiên với model thật.)*
+- **Lượt mô phỏng:** `cost/simulate-1.csv` · **Run ID:** `simulate-1@20261128-093609` (50 phiên mô phỏng qua bản chạy thử thật, seed 42, 0 phiên lỗi).
+- **Đầu vào:** 3 persona (`dung_it` 50% · `dung_vua` 30% · `dung_nhieu` 20% từ phỏng vấn & `data/preclass/`), tỉ lệ đạt **25/25 (100%)** từ `eval/run-2.csv` (`run-2@20261128-093105` qua `--rate-from`).
+- **Chi phí / task thành công:** **$0.00075** (≈ 19 ₫) với `gemini-3.5-flash-lite`; **$0.0015** (≈ 37 ₫) với `gemini-3.8-flash`.
+- **Tổng chi phí theo 3 kịch bản quy mô (model `gemini-3.5-flash-lite` trả phí chính thức):**
+  - Thấp (300 người): **$2.58 / tháng** (≈ 65.494 ₫)
+  - Cơ sở (700 người): **$6.02 / tháng** (≈ 152.819 ₫) — tức **$0.0086 / người / tháng** (≈ **218 ₫ / người / tháng**)
+  - Cao (1.000 người): **$8.59 / tháng** (≈ 218.313 ₫)
+- **So với impact:** Chi phí cơ sở chỉ **~218 ₫ / người / tháng** (tổng cả khoá 700 học viên chỉ tốn **~153.000 ₫ / tháng**) để đổi lấy impact tiết kiệm **~150 giờ học viên / tháng** (~1 giờ/HV/tháng, tránh hiểu sai và tắc nghẽn khi học pre-class buổi tối). Quyết định: **Rất đáng làm (Go)**.
+- Chi tiết: xem [cost/cost-estimate.md](cost/cost-estimate.md).
 
 ---
 
@@ -185,6 +193,7 @@ flowchart LR
 
 | 28/11/2026 · trước CP3 | Thêm phỏng vấn P5 vào §1; §2 cập nhật trung vị phỏng vấn (~6') | P5 kể phải tự kéo thanh trượt 2–3 phút để tìm lại đúng đoạn bài đối chiếu — `evidence/interviews/P5.md`. Thừa số 5 phút/lượt giữ nguyên. |
 | 28/11/2026 · CP3 → CP4 | Cải tiến vòng 2: lọc các từ khoá hội thoại chung (`_GENERIC_KW`) khỏi `_has_lesson_reference` trong `codebase/tools.py` và đổi từ khoá `giai thich` → `giai thich ly do` trong `data/lessons.json`; chạy Eval lượt 2 (`run-2@20261128-093105`) | Sửa trực tiếp lỗi `B08` ở lượt 1 ("giải thích lại đi" bị khớp nhầm từ khoá chung làm bỏ qua bước hỏi lại HAX G10). Kết quả tăng **24/25 (96%) → 25/25 (100%)**, 0 câu tệ đi, số lượt gọi model trung bình giảm 0.8 → 0.7. Chuẩn đạt ở §7 giữ nguyên. |
+| 28/11/2026 · CP4 | Hoàn thành mô phỏng 50 phiên `simulate-1@20261128-093609`, điền hoàn chỉnh `cost/cost-estimate.md` và `spec.md` §8 (Chiêu) | Đạt chuẩn Rubric R6: đủ 3 persona, 3 quy mô, 3 model trả phí chính thức, tỉ lệ đạt lấy từ lượt 2 (100%), chi phí cơ sở $6.02/tháng (~153k VNĐ cho 700 HV) so với impact ~150 giờ/tháng. |
 
 | 28/11/2026 · trước CP3 | Nối model thật `gemini-3.5-flash-lite` trong `codebase/ai.py`, chạy Eval lượt 1 (`run-1@20261128-002242`) trên 25 câu, cập nhật §4 & §7 | Hoàn thiện điều kiện gọi AI thật cho CP3 (`eval/run-1.csv`: 24/25 = 96,0%, 0 lỗi API). Phát hiện 1 lỗi thật ở `B08` ("giải thích lại đi" bị khớp nhầm từ khoá `giai thich` của `[B05-P02]`) để cải tiến ở lượt 2. Chuẩn đạt ở §7 giữ nguyên. |
 

@@ -20,4 +20,7 @@ Ai nói trang nào (mỗi người ≥1 phần):
 
 | Trang | Người nói |
 |---|---|
-| | |
+| Trang 1–2 (Người dùng, Pain & Impact) | **Đinh Hoàng Phong** |
+| Trang 3–4 (Giải pháp kiến trúc & Demo live) | **Nguyễn Xuân Đạt** |
+| Trang 5 (Đánh giá & Vòng cải tiến lượt 1 → 2) | **Trần Xuân Lộc** |
+| Trang 6–8 (Chi phí mô phỏng, Kết luận Go & Hướng 1 tuần tới) | **Phạm Văn Chiêu** |
