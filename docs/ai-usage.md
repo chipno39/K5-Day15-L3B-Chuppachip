@@ -12,9 +12,14 @@ README của nhóm có mục "Dùng AI vào việc gì" (2–3 dòng, bắt bu�
 | Rà câu hỏi phỏng vấn / khảo sát | Claude Code | Soạn bộ câu hỏi Mom Test, tin nhắn hẹn, script Apps Script tạo Google Form; đánh dấu câu dẫn dắt cần tránh | Phong duyệt từng câu trước khi hỏi; người được phỏng vấn là người thật. **Riêng câu trả lời P2 đã được công cụ AI diễn đạt lại** trước khi ghi, nên `P2.md` chỉ giữ ý chính, bỏ chi tiết AI có thể đã thêm, không lấy làm trích nguyên văn | Đinh Hoàng Phong |
 | Chuyển ghi âm phỏng vấn thành chữ | Whisper (`faster-whisper`, chạy trên máy, không gửi ra ngoài) | Chuyển ghi âm P1 thành chữ; Claude Code sắp vào mẫu `P1.md` | Phong nghe lại ghi âm, xác nhận và sửa 3 chỗ máy nhận sai ("lên trường mới", "tóm tắt hộ", "bài lab"); file ghi âm không commit | Đinh Hoàng Phong |
 | Tổng hợp khảo sát | Claude Code (đọc Sheet kết quả qua Google Drive) | Đếm x/n từng câu, gắn cờ phiếu nghi là bản thử | Phong xác nhận phiếu thử, đối chiếu lại số với Google Forms | Đinh Hoàng Phong |
+
+| Viết câu thử (benchmark) | | | Mỗi câu thử có `source`; câu thử AI viết được ghi rõ | |
+| Sinh data `synthetic` (nếu có) | | | Seed __ · kiểm tay __ dòng | |
+| Chấm cột `pass` bằng LLM (nếu có) | | | Kiểm tra thủ công __ câu thử, khớp __/__ | |
+| Slide, văn bản | Claude Code | Trích chữ từ `demo-slides.pdf`, dò từng số / trích dẫn trang 1–8 với file nguồn → `slides/soat-so-lieu.md`; soạn khung ý cho `reflection/dinh-hoang-phong.md` | Phong duyệt từng dòng soát (vd câu trích P3 trên slide không có trong `P3.md`), gửi Chiêu sửa slide; tự viết lại reflection bằng lời của mình | Đinh Hoàng Phong |
+
 | Viết câu thử (benchmark) | Coding agent (Antigravity / Codex) | Hỗ trợ chuẩn hoá format 6 cột và gợi ý câu thử mở rộng cho 4 lớp chỗ khó | Lộc & Đạt rà toàn bộ 25 câu `eval/benchmark.csv`; 11/25 câu (44%) lấy từ câu hỏi học viên thật (S01–S06, P3), 14 câu `tu_viet` ghi rõ nguồn; `python run.py check` 0 lỗi | Trần Xuân Lộc, Nguyễn Xuân Đạt |
 | Sinh data `synthetic` (nếu có) | Coding agent + viết tay có cấu trúc | Tóm tắt 15 đoạn kiến thức phổ quát (`B01-P01`–`B08-P01`) vào `data/lessons.json` | Viết tay có cấu trúc (không sinh ngẫu nhiên), kiểm tay đủ 15/15 đoạn bởi Đạt & Lộc; không dùng nguyên tài liệu khoá và không tính là bằng chứng pain | Nguyễn Xuân Đạt, Trần Xuân Lộc |
 | Chấm cột `pass` bằng LLM (nếu có) | Không dùng LLM chấm tự động | Codex chỉ đề xuất nháp B01–B05 để đối chiếu; toàn bộ điểm `pass` trong `run-1.csv` & `run-2.csv` được chấm thủ công theo `metric_spec.yaml` | Đạt & Lộc kiểm tra thủ công 25/25 câu và chấm chéo độc lập B01–B05 khớp **5/5** (`eval/README.md` mục 3) | Trần Xuân Lộc, Nguyễn Xuân Đạt |
-| Slide, văn bản | Coding agent | Hỗ trợ rà cấu trúc `spec.md`, `cost/cost-estimate.md`, `README.md` theo checklist rubric | Chiêu, Phong, Đạt đối chiếu từng con số trên `demo-slides.pdf` với file nguồn thật (`summary.md`, `report.md`, `simulate-1-summary.md`) | Phạm Văn Chiêu, cả nhóm |
-
+Phong làm nốt validation/log.md (2–3 bạn ngoài nhóm dùng thử) để ăn +5đ Bonus.
 **Không dùng AI để:** tạo người được phỏng vấn, trích dẫn, câu trả lời khảo sát; sửa kết quả các lượt đã chạy (`eval/run-*.csv`, `cost/simulate-*.csv`, `traces/`).
